@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>MKK Sp. z o.o. - odzież i gadżety z pomysłem</title>
+</head>
+
+<body>
+    <header>
+        <div class="container row">
+            <a class="logo__link" href="#">
+                <img src="./img/Logo-MKK-2.svg" alt="logo MKK" class="logo__img">
+            </a>
+            <nav class="nav">
+                <ul class="nav__list nav__list--primary">
+                    <li class="nav__item"><a href="#" class="nav__link">O nas</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Usługi</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Oferta</a></li>
+                </ul>
+                <ul class="nav__list nav__list--secondary">
+                    <li class="nav__item"><a href="#" class="nav__link nav__link--button">Kontakt</a></li>
+                </ul>
+            </nav>
+            <button class="button-one" aria-controls="primary-navigation" aria-expanded="false" onclick="toggleMenu()">
+                <svg class="hamburger" viewBox="0 0 100 100" width="2.5rem">
+                    <rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
+                    <rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect>
+                    <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5"></rect>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container row hero">
+            <div class="hero__info">
+                <h2 class="hero__title">MKK - odzież i gadżety z pomysłami</h2>
+                <p class="hero__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam vel dolore aspernatur quo explicabo fugiat doloribus cumque rem cum sit nesciunt, provident blanditiis ipsam asperiores, voluptate tempore eaque delectus officia!</p>
+                <button class="hero__btn">Sprawdź to!</button>
+            </div>
+            <img class="hero__img" src="img/hero-image.jpg" alt="hero image">
+
+        </div>
+
+
+    </section>
+    <main class="main-section">
+
+
+    </main>
+    <footer></footer>
+</body>
+
+
+<script>
+
+    const mobileNav = document.querySelector(".nav")
+    const burgerBtn = document.querySelector(".hamburger")
+
+    burgerBtn.addEventListener("click", function () {
+        mobileNav.classList.toggle("active")
+    })
+
+    // function toggleMenu() {
+    //     const button = document.querySelector('.button-one');
+    //     const navList = document.querySelector('.nav__list');
+
+    //     button.classList.toggle('active');
+    //     navList.classList.toggle('active');
+    // }
+
+</script>
+
+</html>
