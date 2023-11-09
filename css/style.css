@@ -2,6 +2,16 @@
 /*   general settings   */
 /* -------------------- */
 
+:root {
+	--red-dark: #f84f4f;
+	--red-light: #b57577;
+	--blue-light: #0088dd;
+	--blue-dark: #165fc6;
+	--white-dark: #ccc4c7;
+	--white-light: #f2f2f2;
+	--yellow: rgb(255, 242, 100);
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -13,21 +23,11 @@ html {
 	scroll-padding: 5rem;
 }
 
-:root {
-	--red-dark: #f84f4f;
-	--red-light: #b57577;
-	--blue-light: #0088dd;
-	--blue-dark: #165fc6;
-	--white-dark: #ccc4c7;
-	--white-light: #f2f2f2;
-	--yellow: rgb(255, 242, 100);
-}
 
 body {
 	font-family: "Roboto", sans-serif;
 	font-weight: 500;
 	font-size: 16px;
-	overflow: hidden;
 }
 
 img {
@@ -71,6 +71,7 @@ header {
 	height: 5rem;
 	align-items: baseline;
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(15px);
 }
 
 .nav {
@@ -107,11 +108,16 @@ header {
 	text-transform: uppercase;
 	text-decoration: none;
 	color: var(--white-light);
+	transition: 0.3s ease-in-out;
 }
 
 .nav__link:hover,
-.nav__link:focus {
-	opacity: 0.65;
+.nav__link:focus,
+.nav__link--button:hover,
+.nav__link--button:focus,
+.hero__btn:hover,
+.hero__btn:focus {
+	opacity: 0.75;
 }
 
 .nav__link--button {
@@ -119,6 +125,9 @@ header {
 	color: var(--red-dark);
 	border-radius: 100px;
 	background-color: var(--white-light);
+	/* box-shadow: var(--red-light) 0px 8px 24px;
+	box-shadow: 2px 0 -2px 0 rgba(0, 0, 0, 0.25); */
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px, rgba(0, 0, 0, 0.12) 0px 2px 4px;
 }
 
 /* -------------------- */
@@ -148,24 +157,24 @@ button {
 	fill: var(--button-color); /* Dodaj tę linię, aby zachować kolor linii */
 }
 
-.button-one:hover .line {
+.button-one[aria-expanded="true"] .line {
 	transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
 	fill: var(--button-color); /* Dodaj tę linię, aby zachować kolor linii na hover */
 }
 
-.button-one:hover :is(.top, .bottom) {
+.button-one[aria-expanded="true"] :is(.top, .bottom) {
 	y: 45;
 }
 
-.button-one:hover .top {
+.button-one[aria-expanded="true"] .top {
 	rotate: 45deg;
 }
 
-.button-one:hover .middle {
+.button-one[aria-expanded="true"] .middle {
 	opacity: 0;
 }
 
-.button-one:hover .bottom {
+.button-one[aria-expanded="true"] .bottom {
 	rotate: -45deg;
 }
 
@@ -180,13 +189,13 @@ button {
 }
 
 .hero {
-	padding: 3em 2em;
+	padding: 3.5em 2em;
 	/* border: 1px solid black; */
 	display: block;
 }
 
 .hero__info {
-	color:var(--white-dark);
+	color: var(--white-dark);
 	/* background-color: var(--blue-light); */
 	margin-bottom: 2em;
 }
@@ -210,9 +219,44 @@ button {
 	color: var(--white-light);
 	background-color: var(--red-dark);
 	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px, rgba(0, 0, 0, 0.12) 0px 2px 4px;
 }
 
+.hero__img {
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px, rgba(0, 0, 0, 0.12) 0px 2px 4px;
+}
 
+/* -------------------- */
+/*   services section   */
+/* -------------------- */
+
+.services-section {
+	background-color: var(--white-dark);
+}
+
+.services {
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	gap: 2em;
+	color: var(--red-dark);
+}
+
+.service {
+	padding: 1em 0;
+}
+
+.service-img {
+	width: 6rem;
+}
+
+.service-text {
+	font-size: 1.75rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 0.5em 0;
+}
 
 /* -------------------- */
 /*     main section     */
@@ -220,7 +264,6 @@ button {
 
 .main-section {
 	background-color: var(--white-light);
-	height: 100vh;
 }
 
 /* -------------------- */
@@ -244,9 +287,9 @@ button {
 		flex-direction: column;
 		transform: translate(100%);
 		transition: 0.3s ease-in-out;
-		opacity: 0.5;
+		opacity: 0.6;
 		background-color: var(--white-light);
-		backdrop-filter: blur(10px);
+
 		box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.25);
 	}
 
@@ -288,16 +331,6 @@ button {
 		margin-bottom: 1.25em;
 	}
 
-	/* .nav__list--primary {
-		padding: 2em 0;
-	}
-	
-	.nav__list--secondary {
-		padding: 3em 0;
-		padding-top: 0;
-		align-items: center;
-		justify-content: center;
-	} */
 
 	.button-one {
 		display: block;
@@ -321,5 +354,12 @@ button {
 
 	.hero__btn {
 		margin-bottom: 0;
+	}
+
+	.services {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: 2em 0;
 	}
 }
