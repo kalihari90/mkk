@@ -27,8 +27,8 @@
                     <li class="nav__item"><a href="#" class="nav__link nav__link--button">Kontakt</a></li>
                 </ul>
             </nav>
-            <button class="button-one" aria-controls="primary-navigation" aria-expanded="false" onclick="toggleMenu()">
-                <svg class="hamburger" viewBox="0 0 100 100" width="2.5rem">
+            <button class="hamburger__button" aria-controls="primary-navigation" aria-expanded="false">
+                <svg class="hamburger__svg" viewBox="0 0 100 100" width="2.5rem">
                     <rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
                     <rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect>
                     <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5"></rect>
@@ -40,20 +40,18 @@
     <section class="hero-section">
         <div class="container row hero">
             <div class="hero__info">
-                <h2 class="hero__title">MKK - odzież i gadżety z pomysłami</h2>
-                <p class="hero__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, at natus
-                    pariatur iste repudiandae officia voluptate, ducimus tempora rem mollitia animi. Amet optio quasi
-                    laudantium. Eius, architecto. Unde, voluptatum a!
-                    1. Who are you?
-                    2. What do you do?
-                    3. How can you help me?</p>
-                <button class="hero__btn">Sprawdź to!</button>
+                <h2 class="hero__title">Kim jesteśmy?</h2>
+                <p class="hero__text">Drukarnia reklamowa z ugruntowaną pozycją na rynku wykorzystującą nowoczesne
+                    technologie oferująca szeroki zakres usług w zakresie odzieży reklamowej, gadżetów oraz poligrafii.
+                    Wieloletnie doświadczenie pozwala nam na fachową i kompleksową obsługę klientów: firm, instytucji,
+                    urzędów oraz osób prywatnych</p>
+
+                <p class="hero__text">tutaj umieściłbym loga klientów</p>
+
+                <button class="hero__btn">Dołącz do grona zadowolonych klientów!</button>
             </div>
             <img class="hero__img" src="img/hero-image.jpg" alt="hero image">
-
         </div>
-
-
     </section>
 
     <section class="services-section">
@@ -78,8 +76,55 @@
 
     </section>
 
-    <main class="main-section">
+    <section class="about-us-first-section">
 
+        <div class="container about-us">
+
+            <h2 class="hero__title">Historia</h2>
+            <p class="hero__text"><span class="hero__text--date">1995</span> - Firma prowadzi działalność w
+                branży reklamowej.</p>
+            <p class="hero__text"><span class="hero__text--date">2002</span> - zmieniliśmy formę prawną i
+                działamy pod nazwą MKK Sp. z o.o. . Wraz z rosnącymi potrzebami
+                rynku poszerzamy
+                swoją ofertę, unowocześniamy linie technologiczne oraz szukamy nowych innowacyjnych technik i metod
+                zdobienia odzieży.</p>
+            <p class="hero__text"><span class="hero__text--date">2005</span> - realizujemy zamówienia specjalne na
+                Dalekim Wschodzie. Daje to możliwość
+                dostarczenia wysokiej jakości towarów zaprojektowanych specjalnie na potrzeby klienta w atrakcyjnej
+                cenie.</p>
+            <h2 class="hero__title">Technologie</h2>
+            <p class="hero__text">Cały czas inwestujemy w zakup nowoczesnych, ekonomicznych oraz wydajniejszych
+                maszyn umożliwiających znakowanie odzieży z bardzo dużą dokładnością i jakością, w krótszych
+                terminach. W ciągu ostatnich 2 lat znacznie rozbudowaliśmy zaplecze technologiczne, co pozwoliło nam
+                na urozmaicenie oferty nadruków o transfer offsetowy.</p>
+            <p class="hero__text">W sitodruku wykorzystujemy 2 automaty mogące drukować do 12 kolorów, hafciarnia
+                dysponuje 4 maszynami – w sumie 30 głowic haftujących. Dział handlowy liczy już dwudziestu
+                przedstawicieli, którzy robią wszystko, aby zrealizować nawet najbardziej wyszukane zlecenia naszych
+                klientów.</p>
+        </div>
+
+    </section>
+
+    <section class="about-us-second-section">
+        <div class="container">
+            <div class="services row">
+                <div class="service">
+                    <p class="about-us-big-number">28</p>
+                    <p class="service-text">lat na rynku</p>
+                </div>
+                <div class="service">
+                    <p class="about-us-big-number">22k</p>
+                    <p class="service-text">zleceń</p>
+                </div>
+                <div class="service">
+                    <p class="about-us-big-number">500</p>
+                    <p class="service-text">klientów</p>
+                </div>
+
+    </section>
+
+
+    <main class="main-section">
     </main>
     <footer></footer>
     <script src="./js/main.js"></script>
