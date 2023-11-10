@@ -6,16 +6,22 @@
 	/* --red-dark: #f84f4f;	 */
 	--red-dark: #a03a45;
 	--red-light: #b57577;
-	--blue-light: #8299b2;
 	--blue-dark: #2b4b71;
 	--white-dark: #ccc4c7;
 	--white-light: #f5f5f5;
+	--yellow: rgb(255, 242, 100);
+
+	--blue-light: #52e1fd;
+
+	/* unused */
 	--black-dark: #111111;
 	--black-light: #333333;
-	--yellow: rgb(255, 242, 100);
+	/* --blue-light: #8299b2; */
 }
 
-* {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -40,6 +46,10 @@ img {
 	background-repeat: no-repeat;
 	background-size: cover;
 	shape-margin: 0.75rem;
+}
+
+ul {
+	list-style: none;
 }
 
 .container {
@@ -91,7 +101,6 @@ header {
 
 .nav__list {
 	display: flex;
-	list-style: none;
 	margin: 0 0 0 clamp(2em, 4vw, 4em);
 	padding: 0;
 	gap: clamp(2em, 4vw, 4em);
@@ -110,10 +119,35 @@ header {
 }
 
 .nav__link {
+	position: relative;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: var(--white-light);
 	transition: 0.3s ease-in-out;
+}
+
+.nav__link,
+.nav__link::before,
+.nav__link::after {
+	transition: 0.3s ease-in-out;
+}
+
+.nav__link--animation::after {
+	content: "";
+	position: absolute;
+	bottom: -0.5em;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background-color: #fff;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.3s;
+}
+
+.nav__link--animation:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
 }
 
 .nav__link:hover,
@@ -197,6 +231,7 @@ button {
 .hero-section {
 	background-color: var(--blue-dark);
 	margin-top: 5rem;
+	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .hero {
@@ -211,24 +246,40 @@ button {
 	margin-bottom: 2em;
 }
 
-.hero__title {
+.hero__title,
+.about-us__title,
+.printing__title,
+.gadgets__title,
+.clothing__title {
 	font-size: 2rem;
 	padding: 0.75em 0;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
+	transition: transform 0.3s ease-in-out;
 }
 
-.hero__title:first-of-type {
+.printing__title:hover,
+.gadgets__title:hover,
+.clothing__title:hover,
+.big-number-text:hover,
+.service-text:hover {
+	transform: scale(1.2);
+}
+
+.hero__title:first-of-type,
+.about-us__title:first-of-type {
 	padding-top: 0;
 }
 
-.hero__text {
+.hero__text,
+.about-us__text {
 	font-size: 1.25rem;
 	padding: 0.5em 0;
 	line-height: 1.25em;
 }
 
-.hero__text--date {
+/* .hero__text--date */
+.about-us__text--date {
 	font-size: 2rem;
 	font-weight: bold;
 }
@@ -248,63 +299,70 @@ button {
 }
 
 .hero__img {
-	box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px, rgba(0, 0, 0, 0.12) 0px 2px 4px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px, rgba(0, 0, 0, 0.24) 0px 2px 4px;
 }
 
-/* --------------------------- */
-/*   services stripe section   */
-/* -------------------------- */
+/* ----------------------------- */
+/*   services (stripe section)   */
+/* ---------------------------- */
 
 .services-section {
 	background-color: var(--white-light);
 	color: var(--blue-dark);
+	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.25);
 }
 
-.services {
+.services,
+.big-numbers {
 	margin: 0 auto;
 	display: block;
 	text-align: center;
 	gap: 2em;
 }
 
-.service {
+.service,
+.big-number-box {
 	padding: 1em 0;
+}
+
+.service-text,
+.big-number-text {
+	font-size: 1.75rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 1em 0;
+	transition: 0.3s ease-in-out;
 }
 
 .service-img {
 	width: 6rem;
 }
 
-.service-text {
-	font-size: 1.75rem;
-	font-weight: bold;
-	text-transform: uppercase;
-	padding: 0.5em 0;
-}
-
 /* -------------------- */
 /*   about us section   */
 /* -------------------- */
 
-.about-us-first-section {
+.about-us-section {
 	background-color: var(--blue-dark);
 	color: var(--white-light);
+	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .about-us {
 	padding: 3.5em 2em;
 }
 
-/* -------------------- */
-/* about us stripe section */
-/* -------------------- */
+/* ---------------------------- */
+/* big-numbers (stripe section) */
+/* --------------------------- */
 
-.about-us-second-section {
+.big-numbers-section {
 	background-color: var(--white-light);
 	color: var(--blue-dark);
+	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.25);
 }
 
-.about-us-big-number {
+.big-number {
 	font-size: 6rem;
 	font-weight: bold;
 	padding: 0.5rem 1.5rem;
@@ -312,23 +370,103 @@ button {
 	border-radius: 3rem;
 	color: var(--blue-dark);
 	background-color: var(--yellow);
+	box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 4px, rgba(0, 0, 0, 0.8) 0px 2px 4px;
 }
 
-/* -------------------- */
-/*     main section     */
-/* -------------------- */
+/* ---------------------------- */
+/*       printing section       */
+/* ---------------------------- */
 
-.main-section {
-	background-color: var(--white-light);
+.printing-section {
+	/* background-color: var(--blue-dark); */
+	background: var(--blue-dark);
+	background: linear-gradient(270deg, var(--blue-dark) 50%, var(--blue-light) 100%);
+	color: var(--white-light);
+	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.printing,
+.gadgets,
+.clothing {
+	padding: 3.5em 0;
+	/* border: 1px solid black; */
+	display: block;
+}
+
+.printing__services,
+.gadgets__services,
+.clothing__services {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.printing__service-icon,
+.gadgets__service-icon,
+.clothing__service-icon {
+	padding-right: 1ch;
+	font-size: 1.5rem;
+}
+
+.printing__service,
+.gadgets__service,
+.clothing__service {
+	font-size: 1.5rem;
+}
+
+.printing__img,
+.gadgets__img,
+.clothing__img {
+	height: 15rem;
+	object-fit: contain;
+}
+
+.printing__title,
+.gadgets__title,
+.clothing__title {
+	text-align: center;
+}
+
+.printing__left-col,
+.gadgets__right-col,
+.clothing__left-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* ---------------------------- */
+/*       gadgets section       */
+/* ---------------------------- */
+
+.gadgets-section {
+	/* background-color: var(--red-dark); */
+	background: var(--red-dark);
+	background: linear-gradient(90deg, var(--red-dark) 50%, var(--red-light) 100%);
+
+	color: var(--white-light);
+	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* ----------------------------- */
+/*       clothing  section       */
+/* ----------------------------- */
+
+.clothing-section {
+	/* background-color: var(--blue-dark); */
+	background: var(--blue-dark);
+	background: linear-gradient(270deg, var(--blue-dark) 50%, var(--blue-light) 100%);
+	color: var(--white-light);
+	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 /* -------------------- */
 /*       footer         */
 /* -------------------- */
 
-/* -------------------- */
-/*    media queries     */
-/* -------------------- */
+/* ----------------------------------- */
+/*    media queries  - responsivness   */
+/* ----------------------------------- */
 
 /* mobile navigation */
 @media screen and (max-width: 750px) {
@@ -395,6 +533,10 @@ button {
 	}
 }
 
+/* ============= */
+/* == desktop == */
+/* ============= */
+
 @media (min-width: 750px) {
 	.hero {
 		display: flex;
@@ -414,10 +556,33 @@ button {
 		margin-bottom: 0;
 	}
 
-	.services {
+	.services,
+	.big-numbers {
 		display: flex;
 		justify-content: space-between;
 		margin: 0 auto;
 		padding: 2em 0;
+	}
+
+	.printing,
+	.gadgets,
+	.clothing {
+		display: flex;
+		gap: 2em;
+	}
+
+	.printing__left-col,
+	.printing__right-col,
+	.gadgets__left-col,
+	.gadgets__right-col,
+	.clothing__left-col,
+	.clothing__right-col {
+		width: 50%;
+	}
+
+	.printing__text,
+	.gadgets__text,
+	.clothing__text {
+		text-align: center;
 	}
 }
