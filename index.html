@@ -21,9 +21,14 @@
             </a>
             <nav class="nav">
                 <ul class="nav__list nav__list--primary">
-                    <li class="nav__item"><a href="#" class="nav__link nav__link--animation">O nas</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link nav__link--animation">Usługi</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link nav__link--animation">Oferta</a></li>
+                    <li class="nav__item"><a href="#about-us-section" class="nav__link nav__link--animation">O nas</a>
+                    </li>
+                    <li class="nav__item"><a href="#printing-section"
+                            class="nav__link nav__link--animation">Poligrafia</a></li>
+                    <li class="nav__item"><a href="#gadgets-section" class="nav__link nav__link--animation">Gadżety</a>
+                    </li>
+                    <li class="nav__item"><a href="#clothing-section" class="nav__link nav__link--animation">Odzież</a>
+                    </li>
                 </ul>
                 <ul class="nav__list nav__list--secondary">
                     <li class="nav__item"><a href="#" class="nav__link nav__link--button">Kontakt</a></li>
@@ -41,7 +46,7 @@
     <!-- ========== MAIN CONTENT ========== -->
     <main>
         <!-- HERO SECTION (ABOVE THE FOLD)-->
-        <section class="hero-section">
+        <section class="hero-section" id="hero-section">
             <div class="container row hero">
                 <div class="hero__info">
                     <h2 class="hero__title">Kim jesteśmy?</h2>
@@ -61,27 +66,33 @@
         </section>
 
         <!-- SERVICES (STRIPE SECTION) -->
-        <section class="services-section">
+        <section class="services-section" id="services-section">
             <div class="container">
                 <div class="services row">
                     <div class="service">
-                        <img class="service-img" src="./img/printer-regular-24.png" alt="">
-                        <p class="service-text">Poligrafia</p>
+                        <a href="#" class="service__link">
+                            <img class="service-img" src="./img/printer-regular-24.png" alt="Poligrafia">
+                            <p class="service-text">Poligrafia</p>
+                        </a>
                     </div>
                     <div class="service">
-                        <img class="service-img" src="./img/package-regular-24.png" alt="">
-                        <p class="service-text">Gadżety reklamowe</p>
+                        <a href="#" class="service__link">
+                            <img class="service-img" src="./img/package-regular-24.png" alt="Gadżety reklamowe">
+                            <p class="service-text">Gadżety reklamowe</p>
+                        </a>
                     </div>
                     <div class="service">
-                        <img class="service-img" src="./img/t-shirt-solid-24.png" alt="">
-                        <p class="service-text">Odzież reklamowa</p>
+                        <a href="#" class="service__link">
+                            <img class="service-img" src="./img/t-shirt-solid-24.png" alt="Odzież reklamowa">
+                            <p class="service-text">Odzież reklamowa</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ABOUT-US SECTION  -->
-        <section class="about-us-section">
+        <section class="about-us-section" id="about-us-section">
             <div class="container about-us">
                 <h2 class="about-us__title">Historia</h2>
                 <p class="about-us__text"><span class="about-us__text--date">1995</span> - Firma prowadzi działalność w
@@ -111,7 +122,7 @@
         </section>
 
         <!-- BIG-NUMBERS (STRIPE SECTION) -->
-        <section class="big-numbers-section">
+        <section class="big-numbers-section" id="big-numbers-section">
             <div class="container">
                 <div class="big-numbers row">
                     <div class="big-number-box">
@@ -129,7 +140,7 @@
         </section>
 
         <!-- PRINTING SECTION -->
-        <section class="printing-section">
+        <section class="printing-section" id="printing-section">
             <div class="container">
                 <div class="printing row">
                     <div class="printing__left-col">
@@ -168,10 +179,14 @@
         </section>
 
         <!-- GADGETS SECTION -->
-        <section class="gadgets-section">
+        <section class="gadgets-section" id="gadgets-section">
             <div class="container">
                 <div class="gadgets row">
                     <div class="gadgets__left-col">
+                        <img class="gadgets__img" src="./img/package-regular-24.png" alt="Gadżety reklamowe">
+                        <h2 class="gadgets__title">Gadżety reklamowe</h2>
+                    </div>
+                    <div class="gadgets__right-col">
                         <ul class="gadgets__services">
                             <li class="gadgets__service"><img src="./img/arrow-right-circle.svg" alt=""
                                     class="gadgets__service-icon">gadżet</li>
@@ -188,11 +203,6 @@
                             <li class="gadgets__service"><img src="./img/arrow-right-circle.svg" alt=""
                                     class="gadgets__service-icon">gadżet</li>
                         </ul>
-
-                    </div>
-                    <div class="gadgets__right-col">
-                        <img class="gadgets__img" src="./img/package-regular-24.png" alt="Gadżety reklamowe">
-                        <h2 class="gadgets__title">Gadżety reklamowe</h2>
                     </div>
                 </div>
             </div>
@@ -201,7 +211,7 @@
 
         <!-- CLOTHING SECTION -->
 
-        <section class="clothing-section">
+        <section class="clothing-section" id="clothing-section">
             <div class="container">
                 <div class="clothing row">
                     <div class="clothing__left-col">
