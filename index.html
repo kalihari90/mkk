@@ -21,17 +21,16 @@
             </a>
             <nav class="nav">
                 <ul class="nav__list nav__list--primary">
-                    <li class="nav__item"><a href="#about-us-section" class="nav__link nav__link--animation">O nas</a>
+                    <li class="nav__item"><a href="#about-us" class="nav__link nav__link--animation">O nas</a>
                     </li>
-                    <li class="nav__item"><a href="#printing-section"
-                            class="nav__link nav__link--animation">Poligrafia</a></li>
-                    <li class="nav__item"><a href="#gadgets-section" class="nav__link nav__link--animation">Gadżety</a>
+                    <li class="nav__item"><a href="#printing" class="nav__link nav__link--animation">Poligrafia</a></li>
+                    <li class="nav__item"><a href="#gadgets" class="nav__link nav__link--animation">Gadżety</a>
                     </li>
-                    <li class="nav__item"><a href="#clothing-section" class="nav__link nav__link--animation">Odzież</a>
+                    <li class="nav__item"><a href="#clothing" class="nav__link nav__link--animation">Odzież</a>
                     </li>
                 </ul>
                 <ul class="nav__list nav__list--secondary">
-                    <li class="nav__item"><a href="#" class="nav__link nav__link--button">Kontakt</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--button">Kontakt</a></li>
                 </ul>
             </nav>
             <button class="hamburger__button" aria-controls="primary-navigation" aria-expanded="false">
@@ -46,43 +45,46 @@
     <!-- ========== MAIN CONTENT ========== -->
     <main>
         <!-- HERO SECTION (ABOVE THE FOLD)-->
-        <section class="hero-section" id="hero-section">
-            <div class="container row hero">
-                <div class="hero__info">
-                    <h2 class="hero__title">Kim jesteśmy?</h2>
-                    <p class="hero__text">Drukarnia reklamowa z ugruntowaną pozycją na rynku wykorzystującą nowoczesne
-                        technologie oferująca szeroki zakres usług w zakresie odzieży reklamowej, gadżetów oraz
-                        poligrafii.
-                        Wieloletnie doświadczenie pozwala nam na fachową i kompleksową obsługę klientów: firm,
-                        instytucji,
-                        urzędów oraz osób prywatnych</p>
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="row hero">
+                    <div class="hero__info">
+                        <h2 class="hero__title">Kim jesteśmy?</h2>
+                        <p class="hero__text">Drukarnia reklamowa z ugruntowaną pozycją na rynku wykorzystującą
+                            nowoczesne
+                            technologie oferująca szeroki zakres usług w zakresie odzieży reklamowej, gadżetów oraz
+                            poligrafii.
+                            Wieloletnie doświadczenie pozwala nam na fachową i kompleksową obsługę klientów: firm,
+                            instytucji,
+                            urzędów oraz osób prywatnych</p>
 
-                    <p class="hero__text">tutaj umieściłbym loga klientów</p>
+                        <p class="hero__text">tutaj umieściłbym loga klientów</p>
 
-                    <button class="hero__btn">Dołącz do grona zadowolonych klientów!</button>
+                        <button class="hero__btn">Dołącz do grona zadowolonych klientów!</button>
+                    </div>
+                    <img class="hero__img" src="img/hero-image.jpg" alt="hero image">
                 </div>
-                <img class="hero__img" src="img/hero-image.jpg" alt="hero image">
             </div>
         </section>
 
         <!-- SERVICES (STRIPE SECTION) -->
-        <section class="services-section" id="services-section">
+        <section class="services-section" id="services">
             <div class="container">
                 <div class="services row">
                     <div class="service">
-                        <a href="#" class="service__link">
+                        <a href="#printing" class="service__link">
                             <img class="service-img" src="./img/printer-regular-24.png" alt="Poligrafia">
                             <p class="service-text">Poligrafia</p>
                         </a>
                     </div>
                     <div class="service">
-                        <a href="#" class="service__link">
+                        <a href="#gadgets" class="service__link">
                             <img class="service-img" src="./img/package-regular-24.png" alt="Gadżety reklamowe">
                             <p class="service-text">Gadżety reklamowe</p>
                         </a>
                     </div>
                     <div class="service">
-                        <a href="#" class="service__link">
+                        <a href="#clothing" class="service__link">
                             <img class="service-img" src="./img/t-shirt-solid-24.png" alt="Odzież reklamowa">
                             <p class="service-text">Odzież reklamowa</p>
                         </a>
@@ -92,37 +94,46 @@
         </section>
 
         <!-- ABOUT-US SECTION  -->
-        <section class="about-us-section" id="about-us-section">
-            <div class="container about-us">
-                <h2 class="about-us__title">Historia</h2>
-                <p class="about-us__text"><span class="about-us__text--date">1995</span> - Firma prowadzi działalność w
-                    branży reklamowej.</p>
-                <p class="about-us__text"><span class="about-us__text--date">2002</span> - zmieniliśmy formę prawną i
-                    działamy pod nazwą MKK Sp. z o.o. . Wraz z rosnącymi potrzebami
-                    rynku poszerzamy
-                    swoją ofertę, unowocześniamy linie technologiczne oraz szukamy nowych innowacyjnych technik i metod
-                    zdobienia odzieży.</p>
-                <p class="about-us__text"><span class="about-us__text--date">2005</span> - realizujemy zamówienia
-                    specjalne
-                    na
-                    Dalekim Wschodzie. Daje to możliwość
-                    dostarczenia wysokiej jakości towarów zaprojektowanych specjalnie na potrzeby klienta w atrakcyjnej
-                    cenie.</p>
-                <h2 class="about-us__title">Technologie</h2>
-                <p class="about-us__text">Cały czas inwestujemy w zakup nowoczesnych, ekonomicznych oraz wydajniejszych
-                    maszyn umożliwiających znakowanie odzieży z bardzo dużą dokładnością i jakością, w krótszych
-                    terminach. W ciągu ostatnich 2 lat znacznie rozbudowaliśmy zaplecze technologiczne, co pozwoliło nam
-                    na urozmaicenie oferty nadruków o transfer offsetowy.</p>
-                <p class="about-us__text">W sitodruku wykorzystujemy 2 automaty mogące drukować do 12 kolorów,
-                    hafciarnia
-                    dysponuje 4 maszynami – w sumie 30 głowic haftujących. Dział handlowy liczy już dwudziestu
-                    przedstawicieli, którzy robią wszystko, aby zrealizować nawet najbardziej wyszukane zlecenia naszych
-                    klientów.</p>
+        <section class="about-us-section" id="about-us">
+            <div class="container">
+                <div class="about-us">
+                    <h2 class="about-us__title">Historia</h2>
+                    <p class="about-us__text"><span class="about-us__text--date">1995</span> - Firma prowadzi
+                        działalność w
+                        branży reklamowej.</p>
+                    <p class="about-us__text"><span class="about-us__text--date">2002</span> - zmieniliśmy formę prawną
+                        i
+                        działamy pod nazwą MKK Sp. z o.o. . Wraz z rosnącymi potrzebami
+                        rynku poszerzamy
+                        swoją ofertę, unowocześniamy linie technologiczne oraz szukamy nowych innowacyjnych technik i
+                        metod
+                        zdobienia odzieży.</p>
+                    <p class="about-us__text"><span class="about-us__text--date">2005</span> - realizujemy zamówienia
+                        specjalne
+                        na
+                        Dalekim Wschodzie. Daje to możliwość
+                        dostarczenia wysokiej jakości towarów zaprojektowanych specjalnie na potrzeby klienta w
+                        atrakcyjnej
+                        cenie.</p>
+                    <h2 class="about-us__title">Technologie</h2>
+                    <p class="about-us__text">Cały czas inwestujemy w zakup nowoczesnych, ekonomicznych oraz
+                        wydajniejszych
+                        maszyn umożliwiających znakowanie odzieży z bardzo dużą dokładnością i jakością, w krótszych
+                        terminach. W ciągu ostatnich 2 lat znacznie rozbudowaliśmy zaplecze technologiczne, co pozwoliło
+                        nam
+                        na urozmaicenie oferty nadruków o transfer offsetowy.</p>
+                    <p class="about-us__text">W sitodruku wykorzystujemy 2 automaty mogące drukować do 12 kolorów,
+                        hafciarnia
+                        dysponuje 4 maszynami – w sumie 30 głowic haftujących. Dział handlowy liczy już dwudziestu
+                        przedstawicieli, którzy robią wszystko, aby zrealizować nawet najbardziej wyszukane zlecenia
+                        naszych
+                        klientów.</p>
+                </div>
             </div>
         </section>
 
         <!-- BIG-NUMBERS (STRIPE SECTION) -->
-        <section class="big-numbers-section" id="big-numbers-section">
+        <section class="big-numbers-section" id="big-numbers">
             <div class="container">
                 <div class="big-numbers row">
                     <div class="big-number-box">
@@ -140,7 +151,7 @@
         </section>
 
         <!-- PRINTING SECTION -->
-        <section class="printing-section" id="printing-section">
+        <section class="printing-section" id="printing">
             <div class="container">
                 <div class="printing row">
                     <div class="printing__left-col">
@@ -179,7 +190,7 @@
         </section>
 
         <!-- GADGETS SECTION -->
-        <section class="gadgets-section" id="gadgets-section">
+        <section class="gadgets-section" id="gadgets">
             <div class="container">
                 <div class="gadgets row">
                     <div class="gadgets__left-col">
@@ -211,7 +222,7 @@
 
         <!-- CLOTHING SECTION -->
 
-        <section class="clothing-section" id="clothing-section">
+        <section class="clothing-section" id="clothing">
             <div class="container">
                 <div class="clothing row">
                     <div class="clothing__left-col">
@@ -247,6 +258,45 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="row contact">
+                    <div class="contact__left-col">
+                        <h2 class="contact__title">formularz</h2>
+                        <form action="/submit" method="post" class="contact__form">
+                            <!-- Pole imienia -->
+                            <label for="name" class="contact__form-title">Imię:</label>
+                            <input type="text" id="name" name="name" required class="contact__form-input">
+
+                            <!-- Pole nazwiska -->
+                            <label for="surname" class="contact__form-title">Nazwisko:</label>
+                            <input type="text" id="surname" name="surname" required class="contact__form-input">
+
+                            <!-- Pole e-mail -->
+                            <label for="email" class="contact__form-title">E-mail:</label>
+                            <input type="email" id="email" name="email" required class="contact__form-input">
+
+                            <!-- Pole treści wiadomości -->
+                            <label for="message" class="contact__form-title">Treść wiadomości:</label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="contact__form-input contact__form-input--textarea"></textarea>
+
+                            <!-- Przycisk "Wyślij" -->
+                            <button type="submit" class="contact__form-btn">Wyślij</button>
+                        </form>
+
+                    </div>
+
+                    <div class="contact__right-col">
+                        <h2 class="contact__title">dane adresowe</h2>
+                    </div>
+
+                </div>
+            </div>
+
+
         </section>
 
 

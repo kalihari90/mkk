@@ -234,8 +234,13 @@ button {
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-.hero {
-	padding: 3.5em 2em;
+.hero,
+.printing,
+.gadgets,
+.clothing,
+.about-us,
+.contact {
+	padding: 3.5em 0;
 	/* border: 1px solid black; */
 	display: block;
 }
@@ -250,8 +255,10 @@ button {
 .about-us__title,
 .printing__title,
 .gadgets__title,
-.clothing__title {
+.clothing__title,
+.contact__title {
 	font-size: 2rem;
+	font-weight: 900;
 	padding: 0.75em 0;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
@@ -267,7 +274,8 @@ button {
 }
 
 .hero__title:first-of-type,
-.about-us__title:first-of-type {
+.about-us__title:first-of-type,
+.contact__title:first-of-type {
 	padding-top: 0;
 }
 
@@ -284,7 +292,8 @@ button {
 	font-weight: bold;
 }
 
-.hero__btn {
+.hero__btn,
+.contact__form-btn {
 	font-size: 1.25rem;
 	letter-spacing: 0.1rem;
 	margin: 1em 0;
@@ -352,10 +361,6 @@ button {
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-.about-us {
-	padding: 3.5em 2em;
-}
-
 /* ---------------------------- */
 /* big-numbers (stripe section) */
 /* --------------------------- */
@@ -387,14 +392,6 @@ button {
 	background: linear-gradient(90deg, var(--blue-dark) 50%, var(--blue-light) 100%);
 	color: var(--white-light);
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
-}
-
-.printing,
-.gadgets,
-.clothing {
-	padding: 3.5em 0;
-	/* border: 1px solid black; */
-	display: block;
 }
 
 .printing__services,
@@ -433,14 +430,15 @@ button {
 
 .printing__left-col,
 .gadgets__left-col,
-.clothing__left-col {
+.clothing__left-col,
+.contact__left-col {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
 /* ---------------------------- */
-/*       gadgets section       */
+/*        gadgets section       */
 /* ---------------------------- */
 
 .gadgets-section {
@@ -459,8 +457,6 @@ button {
 	order: 0;
 }
 
-
-
 /* ----------------------------- */
 /*       clothing  section       */
 /* ----------------------------- */
@@ -471,12 +467,53 @@ button {
 	background: linear-gradient(90deg, var(--blue-dark) 50%, var(--blue-light) 100%);
 	color: var(--white-light);
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
-	border-bottom: 1px solid var(--black-light);
 }
 
-/* -------------------- */
-/*       footer         */
-/* -------------------- */
+/* ---------------------------- */
+/*        contact section       */
+/* ---------------------------- */
+
+.contact-section {
+	background-color: var(--white-light);
+	color: var(--blue-dark);
+	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.contact__form-title,
+.contact__form-input,
+.contact__form-btn {
+	display: block;
+}
+
+.contact__form-input {
+	width: 100%;
+}
+
+.contact__form-input--textarea {
+	max-width: 100%;
+	min-width: 100%;
+	min-height: 10ch;
+	max-height: 20ch;
+}
+
+.contact__form-title {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	padding: 0.5em 0;
+}
+.contact__form-input {
+	font-size: 1.25rem;
+	line-height: 1.25rem;
+	padding: 0.5em;
+}
+
+.contact__form-btn {
+	font-size: 1.5rem;
+}
+
+/* --------------------------- */
+/*           footer            */
+/* --------------------------- */
 
 /* ----------------------------------- */
 /*    media queries  - responsivness   */
@@ -558,7 +595,11 @@ button {
 /* ============= */
 
 @media (min-width: 750px) {
-	.hero {
+	.hero,
+	.printing,
+	.gadgets,
+	.clothing,
+	.contact {
 		display: flex;
 		gap: 2em;
 	}
@@ -584,14 +625,6 @@ button {
 		padding: 2em 0;
 	}
 
-	.printing,
-	.gadgets,
-	.clothing {
-		display: flex;
-		gap: 2em;
-	}
-
-	
 	.gadgets__left-col {
 		order: 1;
 	}
@@ -605,7 +638,9 @@ button {
 	.gadgets__left-col,
 	.gadgets__right-col,
 	.clothing__left-col,
-	.clothing__right-col {
+	.clothing__right-col,
+	.contact__left-col,
+	.contact__right-col {
 		width: 50%;
 	}
 
@@ -626,7 +661,4 @@ button {
 	.clothing-section {
 		background: linear-gradient(270deg, var(--blue-dark) 50%, var(--blue-light) 100%);
 	}
-
-
 }
-
