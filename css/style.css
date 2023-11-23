@@ -332,6 +332,7 @@ button {
 .service,
 .big-number-box {
 	padding: 1em 0;
+	width: 100%;
 }
 
 .service-text,
@@ -348,7 +349,9 @@ button {
 }
 
 .service-img {
-	width: 6rem;
+	width: 10rem;
+	padding: 0.5rem 1.5rem;
+	margin: 1rem 0;
 }
 
 /* -------------------- */
@@ -372,13 +375,16 @@ button {
 }
 
 .big-number {
+	position: relative;
+	display: inline-block;
 	font-size: 6rem;
 	font-weight: bold;
 	padding: 0.5rem 1.5rem;
+	margin: 1rem 0;
 	border: 2px solid var(--blue-dark);
-	border-radius: 3rem;
 	color: var(--blue-dark);
 	background-color: var(--yellow);
+	border-radius: 2rem;
 	box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.16) 0px 2px 4px;
 }
 
@@ -426,6 +432,7 @@ button {
 .gadgets__title,
 .clothing__title {
 	text-align: center;
+	margin-bottom: 1em;
 }
 
 .printing__left-col,
@@ -434,6 +441,11 @@ button {
 .contact__left-col {
 	display: flex;
 	flex-direction: column;
+}
+
+.printing__left-col,
+.gadgets__left-col,
+.clothing__left-col {
 	justify-content: center;
 }
 
@@ -496,7 +508,8 @@ button {
 	max-height: 20ch;
 }
 
-.contact__form-title {
+.contact__form-title,
+.contact__adress {
 	font-size: 1.5rem;
 	line-height: 1.5rem;
 	padding: 0.5em 0;
@@ -507,8 +520,22 @@ button {
 	padding: 0.5em;
 }
 
+.contact__right-col,
+.contact__left-col {
+	height: auto;
+}
+
 .contact__form-btn {
 	font-size: 1.5rem;
+}
+
+.contact__map {
+	margin: 1.5em 0;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px, rgba(0, 0, 0, 0.36) 0px 2px 4px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* --------------------------- */
@@ -601,7 +628,7 @@ button {
 	.clothing,
 	.contact {
 		display: flex;
-		gap: 2em;
+		gap: 3em;
 	}
 
 	.hero__info {
@@ -648,6 +675,12 @@ button {
 	.gadgets__text,
 	.clothing__text {
 		text-align: center;
+	}
+
+	.printing__title,
+	.gadgets__title,
+	.clothing__title {
+		margin-bottom: 0;
 	}
 
 	.printing-section {
