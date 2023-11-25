@@ -7,7 +7,7 @@
 	--red-dark: #a03a45;
 	--red-light: #b57577;
 	--blue-dark: #2b4b71;
-	--blue-light: #52e1fd;
+	--blue-light: #39b3ce;
 	--white-dark: #ccc4c7;
 	--white-light: #f5f5f5;
 	--yellow: rgb(255, 242, 100);
@@ -67,6 +67,52 @@ a {
 .row {
 	display: flex;
 	flex-direction: row;
+}
+
+/* every section */
+
+.hero,
+.printing,
+.gadgets,
+.clothing,
+.about-us,
+.contact {
+	padding: 3.5em 0;
+	/* border: 1px solid black; */
+	display: block;
+}
+
+.hero__title,
+.about-us__title,
+.printing__title,
+.gadgets__title,
+.clothing__title,
+.contact__title {
+	font-size: 2rem;
+	font-weight: 900;
+	padding: 0.75em 0;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	transition: transform 0.3s ease-in-out;
+}
+
+/* animations */
+
+.printing__title:hover,
+.gadgets__title:hover,
+.clothing__title:hover,
+.big-number-text:hover,
+.service-text:hover {
+	transform: scale(1.2);
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.nav__link--button:hover,
+.nav__link--button:focus,
+.hero__btn:hover,
+.hero__btn:focus {
+	opacity: 0.75;
 }
 
 /* -------------------- */
@@ -150,15 +196,6 @@ header {
 	transform-origin: left;
 }
 
-.nav__link:hover,
-.nav__link:focus,
-.nav__link--button:hover,
-.nav__link--button:focus,
-.hero__btn:hover,
-.hero__btn:focus {
-	opacity: 0.75;
-}
-
 .nav__link--button {
 	padding: 0.5em 1em;
 	color: var(--red-dark);
@@ -234,43 +271,10 @@ button {
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-.hero,
-.printing,
-.gadgets,
-.clothing,
-.about-us,
-.contact {
-	padding: 3.5em 0;
-	/* border: 1px solid black; */
-	display: block;
-}
-
 .hero__info {
 	color: var(--white-light);
 	/* background-color: var(--blue-light); */
 	margin-bottom: 2em;
-}
-
-.hero__title,
-.about-us__title,
-.printing__title,
-.gadgets__title,
-.clothing__title,
-.contact__title {
-	font-size: 2rem;
-	font-weight: 900;
-	padding: 0.75em 0;
-	text-transform: uppercase;
-	letter-spacing: 0.15em;
-	transition: transform 0.3s ease-in-out;
-}
-
-.printing__title:hover,
-.gadgets__title:hover,
-.clothing__title:hover,
-.big-number-text:hover,
-.service-text:hover {
-	transform: scale(1.2);
 }
 
 .hero__title:first-of-type,
@@ -309,6 +313,41 @@ button {
 
 .hero__img {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px, rgba(0, 0, 0, 0.36) 0px 2px 4px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.8;
+}
+
+.hero__logo {
+	height: 6rem;
+	margin-bottom: 1em;
+}
+
+.about-us-section .container,
+.contact-section .container {
+	z-index: 1;
+}
+
+.about-us__bg,
+.contact__bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1; /* Przesuń obrazek w tło */
+	object-fit: cover;
+}
+
+.about-us__bg {
+	background: url("/img/printing_company_2.svg") center/cover no-repeat; /* Zastosuj obrazek w tle */
+	opacity: 0.1; /* Ustaw poziom prześwitu */
+}
+.contact__bg {
+	background: url("/img/printing_company_3.jpg") center/cover no-repeat; /* Zastosuj obrazek w tle */
+	opacity: 0.15;
+	background-size: contain;
 }
 
 /* ----------------------------- */
@@ -375,7 +414,6 @@ button {
 }
 
 .big-number {
-	position: relative;
 	display: inline-block;
 	font-size: 6rem;
 	font-weight: bold;
@@ -410,7 +448,8 @@ button {
 
 .printing__service-icon,
 .gadgets__service-icon,
-.clothing__service-icon {
+.clothing__service-icon,
+.hero__icon {
 	padding-right: 1ch;
 	font-size: 1.5rem;
 }
@@ -499,6 +538,7 @@ button {
 
 .contact__form-input {
 	width: 100%;
+	opacity: 0.75;
 }
 
 .contact__form-input--textarea {
@@ -514,6 +554,13 @@ button {
 	line-height: 1.5rem;
 	padding: 0.5em 0;
 }
+
+.contact__adress--title {
+	font-size: 1.75rem;
+	line-height: 1.75rem;
+	font-weight: 700;
+}
+
 .contact__form-input {
 	font-size: 1.25rem;
 	line-height: 1.25rem;
@@ -527,6 +574,7 @@ button {
 
 .contact__form-btn {
 	font-size: 1.5rem;
+	margin-bottom: 2em;
 }
 
 .contact__map {
@@ -536,6 +584,10 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.contact__icon {
+	padding-right: 1em;
 }
 
 /* --------------------------- */
