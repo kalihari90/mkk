@@ -341,11 +341,11 @@ button {
 }
 
 .about-us__bg {
-	background: url("/img/printing_company_2.svg") center/cover no-repeat; /* Zastosuj obrazek w tle */
+	background: url("../img/printing_company_2.svg") center/cover no-repeat; /* Zastosuj obrazek w tle */
 	opacity: 0.1; /* Ustaw poziom prześwitu */
 }
 .contact__bg {
-	background: url("/img/printing_company_3.jpg") center/cover no-repeat; /* Zastosuj obrazek w tle */
+	background: url("../img/printing_company_3.jpg") center/cover no-repeat; /* Zastosuj obrazek w tle */
 	opacity: 0.15;
 	background-size: contain;
 }
