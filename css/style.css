@@ -324,13 +324,24 @@ button {
 	margin-bottom: 1em;
 }
 
+/* background images */
+
 .about-us-section .container,
-.contact-section .container {
+.contact-section .container,
+.services-section,
+.big-numbers-section {
 	z-index: 1;
 }
 
+.services-section,
+.big-numbers-section {
+	position: relative;
+}
+
 .about-us__bg,
-.contact__bg {
+.contact__bg,
+.services__bg,
+.big-numbers__bg {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -348,6 +359,22 @@ button {
 	background: url("../img/printing_company_3.jpg") center/cover no-repeat; /* Zastosuj obrazek w tle */
 	opacity: 0.15;
 	background-size: contain;
+}
+
+.services__bg {
+	background: url("../img/screen_printing.jpg") center/cover no-repeat; /* Zastosuj obrazek w tle */
+	opacity: 0.15;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+.big-numbers__bg {
+	background: url("../img/opt-lasers.jpg") center/cover no-repeat; /* Zastosuj obrazek w tle */
+	opacity: 0.1;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 }
 
 /* ----------------------------- */
@@ -391,6 +418,7 @@ button {
 	width: 10rem;
 	padding: 0.5rem 1.5rem;
 	margin: 1rem 0;
+	opacity: 0.75;
 }
 
 /* -------------------- */
@@ -465,6 +493,7 @@ button {
 .clothing__img {
 	height: 15rem;
 	object-fit: contain;
+	opacity: 0.75;
 }
 
 .printing__title,
