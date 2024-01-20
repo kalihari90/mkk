@@ -3,13 +3,21 @@
 /* -------------------- */
 
 :root {
-	/* --red-dark: #f84f4f;	 */
-	--red-dark: #a03a45;
-	--red-light: #b57577;
+	/* RED */
+	/* --red-light: #a03a45; */
+	--red-light: #c2200e;
+	/* --red-dark: #b57577; */
+	--red-dark: #8a0e00;
+	/* BLUE */
 	--blue-dark: #2b4b71;
-	--blue-light: #39b3ce;
-	--white-dark: #ccc4c7;
+	/* --blue-light: #39b3ce; */
+	--blue-darker: #001938;
+
+	/* WHITE */
+	/* --white-dark: #ccc4c7; */
+	--white-dark: #e1e2e6;
 	--white-light: #f5f5f5;
+
 	--yellow: rgb(255, 242, 100);
 
 	/* unused */
@@ -32,7 +40,8 @@ html {
 }
 
 body {
-	font-family: "Roboto", sans-serif;
+	/* font-family: "Roboto", sans-serif; */
+	font-family: "Quicksand", sans-serif;
 	font-weight: 500;
 	font-size: 16px;
 }
@@ -98,19 +107,31 @@ a {
 .clothing__title,
 .contact__title,
 .services__title {
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: 900;
-	padding: 0.75em 0;
+	padding-bottom: 0.75em;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
 	transition: transform 0.3s ease-in-out;
 }
 
-/* animations */
+.printing__title,
+.gadgets__title,
+.clothing__title {
+	color: var(--blue-dark);
+	padding: 1rem 3rem;
+}
 
-.printing__title:hover,
-.gadgets__title:hover,
-.clothing__title:hover,
+.gadgets__title {
+	color: var(--red-light);
+}
+
+.title__bg {
+	background-color: var(--white-light);
+	padding: 1rem 2rem;
+}
+
+/* animations */
 .big-number__text:hover,
 .offer__text:hover {
 	transform: scale(1.2);
@@ -141,7 +162,7 @@ header {
 	height: 5rem;
 	text-align: center;
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
-	background-color: var(--red-dark);
+	background-color: var(--red-light);
 	/* backdrop-filter: blur(15px); */
 	display: flex;
 	align-items: center;
@@ -208,10 +229,10 @@ header {
 
 .nav__link--button {
 	padding: 0.5em 1em;
-	color: var(--red-dark);
+	color: var(--red-light);
 	border-radius: 100px;
 	background-color: var(--white-light);
-	/* box-shadow: var(--red-light) 0px 8px 24px;
+	/* box-shadow: var(--red-dark) 0px 8px 24px;
 	box-shadow: 2px 0 -2px 0 rgba(0, 0, 0, 0.25); */
 	box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.16) 0px 2px 4px;
 }
@@ -279,11 +300,12 @@ button {
 	background-color: var(--blue-dark);
 	margin-top: 5rem;
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
+	position: relative;
 }
 
 .hero__info {
 	color: var(--white-light);
-	/* background-color: var(--blue-light); */
+	/* background-color: var(--blue-darker); */
 	margin-bottom: 2em;
 }
 
@@ -295,42 +317,47 @@ button {
 
 .hero__text,
 .about-us__text {
-	font-size: 1.25rem;
-	padding: 0.5em 0;
+	font-size: 1.5rem;
+	padding: 0.5em 0em;
 	line-height: 1.25em;
+}
+
+.about-us__text {
+	font-size: 1.25rem;
+	line-height: 1.5;
 }
 
 /* .hero__text--date */
 .about-us__text--date {
-	font-size: 2rem;
+	font-size: 1.75rem;
 	font-weight: bold;
 }
 
 .hero__btn,
 .contact__form-btn {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	letter-spacing: 0.1rem;
 	margin: 1em 0;
 	padding: 0.5em 1em;
 	color: var(--white-light);
 	text-shadow: var(--white-dark) 1px 1px 2px;
 	border-radius: 100px;
-	background-color: var(--red-dark);
+	background-color: var(--red-light);
 	cursor: pointer;
 	transition: 0.3s ease-in-out;
 	box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.16) 0px 2px 4px;
 }
 
-.hero__img {
+/* .hero__img {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 4px, rgba(0, 0, 0, 0.36) 0px 2px 4px;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	opacity: 0.8;
-}
+} */
 
 .hero__logo {
-	height: 6rem;
+	height: 10rem;
 	margin-bottom: 1em;
 }
 
@@ -348,6 +375,7 @@ button {
 	position: relative;
 }
 
+.hero__bg,
 .about-us__bg,
 .contact__bg,
 .offer__bg,
@@ -361,26 +389,41 @@ button {
 	object-fit: cover;
 }
 
+.hero__bg {
+	background: url("../img/hero_bg.png") center/cover no-repeat; /* Zastosuj obrazek w tle */
+	background-size: cover;
+	opacity: 0.7;
+	z-index: 0;
+}
+
 .about-us__bg {
-	background: url("../img/printing_company_2.svg") center/cover no-repeat; /* Zastosuj obrazek w tle */
-	opacity: 0.1; /* Ustaw poziom prześwitu */
+	/* background: url("../img/printing_company_2.svg") center/cover no-repeat;  */
+	background-color: rgba(0, 25, 56, 1);
+	background-image: radial-gradient(circle, rgba(0, 25, 56, 1) 20%, rgba(43, 75, 113, 1) 100%);
+	opacity: 0.75; /* Ustaw poziom prześwitu */
+	z-index: 0;
 }
 .contact__bg {
-	background: url("../img/printing_company_3.jpg") center/cover no-repeat; /* Zastosuj obrazek w tle */
-	opacity: 0.15;
-	background-size: contain;
+	background: url("../img/contact_bg.jpeg") center/cover no-repeat; /* Zastosuj obrazek w tle */
+	opacity: 0.8;
+	background-size: cover;
+	z-index: 0;
 }
 
 .offer__bg {
-	background: url("../img/screen_printing.jpg") center/cover no-repeat; /* Zastosuj obrazek w tle */
-	opacity: 0.15;
-	background-attachment: fixed;
+	/* background: url("../img/opt-lasers.jpg") center/cover no-repeat; Zastosuj obrazek w tle */
+	background-color: rgba(43, 75, 113, 1);
+	background-image: radial-gradient(circle, rgba(43, 75, 113, 1) 0%, rgba(225, 226, 230, 1) 100%);
+	opacity: 0.1;
+	/* background-attachment: fixed; */
 }
 
 .big-numbers__bg {
-	background: url("../img/opt-lasers.jpg") center/cover no-repeat; /* Zastosuj obrazek w tle */
-	opacity: 0.1;
+	background: url("../img/numbers_bg.png") center/cover no-repeat; /* Zastosuj obrazek w tle */
+	opacity: 0.4;
 	background-attachment: fixed;
+	background-position-x: -300px;
+	background-position-y: 50px;
 }
 
 /* ----------------------------- */
@@ -398,21 +441,23 @@ button {
 	margin: 0 auto;
 	display: block;
 	text-align: center;
-	gap: 2em;
+	gap: 3em;
+	display: flex;
 }
 
 .offer,
 .big-number__box {
 	padding: 1em 0;
 	width: 100%;
+	flex: 1;
 }
 
 .offer__text,
 .big-number__text {
-	font-size: 1.75rem;
+	font-size: 2rem;
 	font-weight: bold;
 	text-transform: uppercase;
-	padding: 1em 0;
+	padding: 0 0 1em;
 	transition: 0.3s ease-in-out;
 }
 
@@ -421,7 +466,8 @@ button {
 }
 
 .offer__img {
-	width: 10rem;
+	width: 300px;
+	height: 300px;
 	padding: 0.5rem 1.5rem;
 	margin: 1rem 0;
 	opacity: 0.75;
@@ -435,6 +481,7 @@ button {
 	background-color: var(--blue-dark);
 	color: var(--white-light);
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
+	position: relative;
 }
 
 /* ---------------------------- */
@@ -466,8 +513,8 @@ button {
 
 .printing-section {
 	/* background-color: var(--blue-dark); */
-	background: var(--blue-light);
-	background: linear-gradient(90deg, var(--blue-dark) 50%, var(--blue-light) 100%);
+	background: var(--blue-darker);
+	background: linear-gradient(90deg, var(--blue-dark) 50%, var(--blue-darker) 100%);
 	color: var(--white-light);
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -528,9 +575,9 @@ button {
 /* ---------------------------- */
 
 .gadgets-section {
-	/* background-color: var(--red-dark); */
-	background: var(--red-dark);
-	background: linear-gradient(90deg, var(--red-dark) 50%, var(--red-light) 100%);
+	/* background-color: var(--red-light); */
+	background: var(--red-light);
+	background: linear-gradient(90deg, var(--red-light) 50%, var(--red-dark) 100%);
 
 	color: var(--white-light);
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
@@ -550,7 +597,7 @@ button {
 .clothing-section {
 	/* background-color: var(--blue-dark); */
 	background: var(--blue-dark);
-	background: linear-gradient(90deg, var(--blue-dark) 50%, var(--blue-light) 100%);
+	background: linear-gradient(90deg, var(--blue-dark) 50%, var(--blue-darker) 100%);
 	color: var(--white-light);
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -560,7 +607,7 @@ button {
 /* ----------------------------- */
 
 .services-section {
-	background-color: var(--red-dark);
+	background-color: var(--red-light);
 	color: var(--white-light);
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -674,6 +721,7 @@ button {
 	background-color: var(--white-light);
 	color: var(--blue-dark);
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
+	position: relative;
 }
 
 .contact__form-title,
@@ -868,6 +916,30 @@ button {
 	.logo__img {
 		height: 3.5rem;
 	}
+
+	.offers,
+	.big-numbers {
+		flex-direction: column;
+	}
+
+	.hero__title,
+	.about-us__title,
+	.printing__title,
+	.gadgets__title,
+	.clothing__title,
+	.contact__title,
+	.services__title {
+		font-size: 2rem;
+	}
+
+	.about-us__text {
+		padding: 0 0.5em;
+	}
+
+	.big-numbers__bg {
+		background-position-x: -250px;
+		background-position-y: 2rem;
+	}
 }
 
 /* ============= */
@@ -882,6 +954,29 @@ button {
 	.contact {
 		display: flex;
 		gap: 3em;
+	}
+
+	.hero__text,
+	.about-us__text {
+		margin: 1em 0;
+	}
+
+	.hero__logo {
+		margin: 0.5em 0;
+	}
+
+	.about-us {
+		display: flex;
+		gap: 3em;
+	}
+
+	.about-us__column {
+		flex: 1;
+	}
+
+	.about-us__title {
+		text-align: center;
+		font-size: 2rem;
 	}
 
 	.footer {
@@ -917,16 +1012,26 @@ button {
 	/* Zamień miejscami trzecią i czwartą kolumnę na breakpoincie */
 
 	.hero__info {
-		width: 50%;
+		width: 100%;
 		margin-bottom: 0;
+		text-align: center;
 	}
 
-	.hero__img {
+	/* .hero__img {
 		width: 50%;
-	}
+	} */
 
 	.hero__btn {
 		margin-bottom: 0;
+	}
+
+	.hero__text-box {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.hero__icon {
+		display: none;
 	}
 
 	.offers,
@@ -963,15 +1068,15 @@ button {
 	}
 
 	.printing-section {
-		background: linear-gradient(270deg, var(--blue-dark) 50%, var(--blue-light) 100%);
+		background: linear-gradient(270deg, var(--blue-dark) 50%, var(--blue-darker) 100%);
 	}
 
 	.gadgets-section {
-		background: linear-gradient(90deg, var(--red-dark) 50%, var(--red-light) 100%);
+		background: linear-gradient(90deg, var(--red-light) 50%, var(--red-dark) 100%);
 	}
 
 	.clothing-section {
-		background: linear-gradient(270deg, var(--blue-dark) 50%, var(--blue-light) 100%);
+		background: linear-gradient(270deg, var(--blue-dark) 50%, var(--blue-darker) 100%);
 	}
 }
 

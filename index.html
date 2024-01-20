@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>MKK Sp. z o.o. - odzież i gadżety z pomysłem</title>
 </head>
@@ -46,20 +47,25 @@
     <main>
         <!-- HERO SECTION (ABOVE THE FOLD)-->
         <section class="hero-section" id="hero">
+            <div class="hero__bg"></div>
+
             <div class="container">
                 <div class="row hero">
                     <div class="hero__info">
                         <h2 class="hero__title">drukarnia reklamowa</h2>
-                        <img class="hero__logo" src="img/Logo-MKK-2.svg" alt="">
-                        <p class="hero__text"><img src="./img/arrow-right-circle.svg" alt="" class="hero__icon">szeroki
-                            zakres usług</p>
-                        <p class="hero__text"><img src="./img/arrow-right-circle.svg" alt=""
-                                class="hero__icon">nowoczesne technologie</p>
-                        <p class="hero__text"><img src="./img/arrow-right-circle.svg" alt="" class="hero__icon">szybkie
-                            terminy realizacji</p>
+                        <img class="hero__logo" src="img/Logo-MKK-2.svg" alt="logo MKK">
+                        <div class="hero__text-box">
+                            <p class="hero__text"><img src="./img/arrow-right-circle.svg" alt=""
+                                    class="hero__icon">szeroki
+                                zakres usług</p>
+                            <p class="hero__text"><img src="./img/arrow-right-circle.svg" alt=""
+                                    class="hero__icon">nowoczesne technologie</p>
+                            <p class="hero__text"><img src="./img/arrow-right-circle.svg" alt=""
+                                    class="hero__icon">szybkie
+                                terminy realizacji</p>
+                        </div>
                         <a href="#contact"><button class="hero__btn">Dołącz do grona zadowolonych klientów!</button></a>
                     </div>
-                    <img class="hero__img" src="img/printing_company.svg" alt="hero image">
                 </div>
             </div>
         </section>
@@ -71,19 +77,19 @@
                 <div class="offers row">
                     <div class="offer">
                         <a href="#printing" class="offer__link">
-                            <img class="offer__img" src="./img/bx-printer.svg" alt="Poligrafia">
+                            <img class="offer__img" src="./img/poligrafia_color.svg" alt="Poligrafia">
                             <p class="offer__text">Poligrafia</p>
                         </a>
                     </div>
                     <div class="offer">
                         <a href="#gadgets" class="offer__link">
-                            <img class="offer__img" src="./img/bx-package.svg" alt="Gadżety reklamowe">
+                            <img class="offer__img" src="./img/gadgets_color.svg" alt="Gadżety reklamowe">
                             <p class="offer__text">Gadżety reklamowe</p>
                         </a>
                     </div>
                     <div class="offer">
                         <a href="#clothing" class="offer__link">
-                            <img class="offer__img" src="./img/bxs-t-shirt.svg" alt="Odzież reklamowa">
+                            <img class="offer__img" src="./img/clothes_color.svg" alt="Odzież reklamowa">
                             <p class="offer__text">Odzież reklamowa</p>
                         </a>
                     </div>
@@ -93,59 +99,90 @@
 
         <!-- ABOUT-US SECTION  -->
         <section class="about-us-section" id="about-us">
+            <div class="about-us__bg"></div>
             <div class="container">
-                <div class="about-us__bg"></div>
                 <div class="about-us">
-                    <h2 class="about-us__title">Historia</h2>
-                    <p class="about-us__text"><span class="about-us__text--date">1995</span> - Firma prowadzi
-                        działalność w
-                        branży reklamowej.</p>
-                    <p class="about-us__text"><span class="about-us__text--date">2002</span> - zmieniliśmy formę prawną
-                        i
-                        działamy pod nazwą MKK Sp. z o.o. . Wraz z rosnącymi potrzebami
-                        rynku poszerzamy
-                        swoją ofertę, unowocześniamy linie technologiczne oraz szukamy nowych innowacyjnych technik i
-                        metod
-                        zdobienia odzieży.</p>
-                    <p class="about-us__text"><span class="about-us__text--date">2005</span> - realizujemy zamówienia
-                        specjalne
-                        na
-                        Dalekim Wschodzie. Daje to możliwość
-                        dostarczenia wysokiej jakości towarów zaprojektowanych specjalnie na potrzeby klienta w
-                        atrakcyjnej
-                        cenie.</p>
-                    <h2 class="about-us__title">Technologie</h2>
-                    <p class="about-us__text">Cały czas inwestujemy w zakup nowoczesnych, ekonomicznych oraz
-                        wydajniejszych
-                        maszyn umożliwiających znakowanie odzieży z bardzo dużą dokładnością i jakością, w krótszych
-                        terminach. W ciągu ostatnich 2 lat znacznie rozbudowaliśmy zaplecze technologiczne, co pozwoliło
-                        nam
-                        na urozmaicenie oferty nadruków o transfer offsetowy.</p>
-                    <p class="about-us__text">W sitodruku wykorzystujemy 2 automaty mogące drukować do 12 kolorów,
-                        hafciarnia
-                        dysponuje 4 maszynami – w sumie 30 głowic haftujących. Dział handlowy liczy już dwudziestu
-                        przedstawicieli, którzy robią wszystko, aby zrealizować nawet najbardziej wyszukane zlecenia
-                        naszych
-                        klientów.</p>
+                    <div class="about-us__column">
+
+                        <h2 class="about-us__title">Historia</h2>
+                        <p class="about-us__text"><span class="about-us__text--date">1995</span> - Firma prowadzi
+                            działalność w
+                            branży reklamowej.</p>
+                        <p class="about-us__text"><span class="about-us__text--date">2002</span> - zmieniliśmy formę
+                            prawną
+                            i
+                            działamy pod nazwą MKK Sp. z o.o. . Wraz z rosnącymi potrzebami
+                            rynku poszerzamy
+                            swoją ofertę, unowocześniamy linie technologiczne oraz szukamy nowych innowacyjnych technik
+                            i
+                            metod
+                            zdobienia odzieży.</p>
+                        <p class="about-us__text"><span class="about-us__text--date">2005</span> - realizujemy
+                            zamówienia
+                            specjalne
+                            na
+                            Dalekim Wschodzie. Daje to możliwość
+                            dostarczenia wysokiej jakości towarów zaprojektowanych specjalnie na potrzeby klienta w
+                            atrakcyjnej
+                            cenie.</p>
+
+
+                    </div>
+                    <div class="about-us__column">
+
+                        <h2 class="about-us__title">Technologie</h2>
+                        <p class="about-us__text">Cały czas inwestujemy w zakup nowoczesnych, ekonomicznych oraz
+                            wydajniejszych
+                            maszyn umożliwiających znakowanie odzieży z bardzo dużą dokładnością i jakością, w krótszych
+                            terminach. W ciągu ostatnich 2 lat znacznie rozbudowaliśmy zaplecze technologiczne, co
+                            pozwoliło
+                            nam
+                            na urozmaicenie oferty nadruków o transfer offsetowy.</p>
+                        <p class="about-us__text">W sitodruku wykorzystujemy 2 automaty mogące drukować do 12 kolorów,
+                            hafciarnia
+                            dysponuje 4 maszynami – w sumie 30 głowic haftujących. Dział handlowy liczy już dwudziestu
+                            przedstawicieli, którzy robią wszystko, aby zrealizować nawet najbardziej wyszukane zlecenia
+                            naszych
+                            klientów.</p>
+
+                    </div>
+                    <div class="about-us__column">
+                        <h2 class="about-us__title">Wartości</h2>
+                        <p class="about-us__text">Misją naszej firmy jest odpowiadanie na ciągle rosnące i zmieniające
+                            się potrzeby klientów. W związku z tym poszerzamy grono naszych pracowników, w taki sposób
+                            żeby każdy klient był obsługiwany na najwyższym poziomie, ponadto poszerzamy naszą ofertę o
+                            nowe marki odzieży i techniki jej zdobienia</p>
+                        <h2 class="about-us__title">Misje</h2>
+                        <p class="about-us__text"><span class="about-us__text--date">JAKOŚĆ</span> - staramy się o każdy
+                            drobiazg</p>
+                        <p class="about-us__text"><span class="about-us__text--date">ODPOWIEDZIALNOŚĆ</span> - staramy
+                            się o każdy drobiazg</p>
+                        <p class="about-us__text"><span class="about-us__text--date">SZACUNEK</span> - staramy się o
+                            każdy drobiazg</p>
+
+                    </div>
+
+
                 </div>
             </div>
         </section>
 
         <!-- BIG-NUMBERS (STRIPE SECTION) -->
-        <section class="big-numbers-section" id="big-numbers">
+        <section class="big-numbers-section animate-section" id="big-numbers">
             <div class="big-numbers__bg"></div>
             <div class="container">
                 <div class="big-numbers row">
                     <div class="big-number__box">
-                        <p class="big-number">28</p>
+                        <p class="big-number"><span class="counter" data-target="28" data-duration="100">0</span></p>
                         <p class="big-number__text">lat na rynku</p>
                     </div>
                     <div class="big-number__box">
-                        <p class="big-number">74k</p>
+                        <p class="big-number"><span class="counter" data-target="74" data-duration="200">0</span>k
+                        </p>
                         <p class="big-number__text">zleceń</p>
                     </div>
                     <div class="big-number__box">
-                        <p class="big-number">666</p>
+                        <p class="big-number"><span class="counter" data-target="666" data-duration="300">0</span></p>
                         <p class="big-number__text">klientów</p>
                     </div>
         </section>
@@ -153,10 +190,10 @@
         <!-- PRINTING SECTION -->
         <section class="printing-section" id="printing">
             <div class="container">
+                <h2 class="printing__title"><span class="title__bg">Poligrafia</span></h2>
                 <div class="printing row">
                     <div class="printing__left-col">
-                        <img class="printing__img" src="./img/bx-printer.svg" alt="Poligrafia">
-                        <h2 class="printing__title">Poligrafia</h2>
+                        <img class="printing__img" src="./img/poligrafia.svg" alt="Poligrafia">
                     </div>
                     <div class="printing__right-col">
                         <ul class="printing__services">
@@ -201,10 +238,10 @@
         <!-- GADGETS SECTION -->
         <section class="gadgets-section" id="gadgets">
             <div class="container">
+                <h2 class="gadgets__title"><span class="title__bg">Gadżety reklamowe</span></h2>
                 <div class="gadgets row">
                     <div class="gadgets__left-col">
-                        <img class="gadgets__img" src="./img/bx-package.svg" alt="Gadżety reklamowe">
-                        <h2 class="gadgets__title">Gadżety reklamowe</h2>
+                        <img class="gadgets__img" src="./img/gadgets.svg" alt="Gadżety reklamowe">
                     </div>
                     <div class="gadgets__right-col">
                         <ul class="gadgets__services">
@@ -231,24 +268,16 @@
                         </ul>
                     </div>
                 </div>
-
-
         </section>
-
-
-        <!-- SERVICES SECTION -->
-
-
-
 
         <!-- CLOTHING SECTION -->
 
         <section class="clothing-section" id="clothing">
             <div class="container">
+                <h2 class="clothing__title"><span class="title__bg">Odzież reklamowa</span></h2>
                 <div class="clothing row">
                     <div class="clothing__left-col">
-                        <img class="clothing__img" src="./img/bxs-t-shirt.svg" alt="Odzież reklamowa">
-                        <h2 class="clothing__title">Odzież reklamowa</h2>
+                        <img class="clothing__img" src="./img/clothes.svg" alt="Odzież reklamowa">
                     </div>
                     <div class="clothing__right-col">
                         <ul class="clothing__services">
@@ -278,18 +307,15 @@
                     </div>
                 </div>
 
-
-
             </div>
         </section>
 
         <!-- SERVICES SECTION -->
 
-        <section class="services-section" id="services">
+        <!-- <section class="services-section" id="services">
             <div class="container">
                 <h2 class="services__title">Usługi</h2>
                 <div class="services row">
-
                     <figure class="card">
                         <h2 class="card__title">Druk cyfrowy</h2>
                         <img src="./img/question.jpg" alt="Grawer laserowy" class="card__img--full">
@@ -301,7 +327,6 @@
                                 ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...</p>
                         </figcaption>
                     </figure>
-
                     <figure class="card">
                         <h2 class="card__title">Offset</h2>
                         <img src="./img/question.jpg" alt="Grawer laserowy" class="card__img--full">
@@ -313,7 +338,6 @@
                                 ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...</p>
                         </figcaption>
                     </figure>
-
                     <figure class="card">
                         <h2 class="card__title">Druk UV</h2>
                         <img src="./img/question.jpg" alt="Grawer laserowy" class="card__img--full">
@@ -325,8 +349,6 @@
                                 ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...</p>
                         </figcaption>
                     </figure>
-
-
                     <figure class="card">
                         <h2 class="card__title">Grawer</h2>
                         <img src="./img/opt-lasers.jpg" alt="Grawer laserowy">
@@ -337,8 +359,6 @@
                             <p class="card__text">ZASTOSOWANIE: długopisy, breloki, pendrive, bidony, inne gadżety
                                 metalowe</p>
                     </figure>
-
-
                     <figure class="card">
                         <h2 class="card__title">Tampodruk</h2>
                         <img src="./img/question.jpg" alt="Grawer laserowy" class="card__img--full">
@@ -350,7 +370,6 @@
                                 ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...</p>
                         </figcaption>
                     </figure>
-
                     <figure class="card">
                         <h2 class="card__title">Tłoczenie</h2>
                         <img src="./img/question.jpg" alt="Grawer laserowy" class="card__img--full">
@@ -362,7 +381,6 @@
                                 ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...</p>
                         </figcaption>
                     </figure>
-
                     <figure class="card">
                         <h2 class="card__title">Sitodruk</h2>
                         <img src="./img/screen_printing.jpg" alt="Grawer laserowy">
@@ -374,7 +392,6 @@
                                 duperele</p>
                         </figcaption>
                     </figure>
-
                     <figure class="card">
                         <h2 class="card__title">Haft</h2>
                         <img src="./img/question.jpg" alt="Grawer laserowy" class="card__img--full">
@@ -386,7 +403,6 @@
                                 ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...</p>
                         </figcaption>
                     </figure>
-
                     <figure class="card">
                         <h2 class="card__title">Transfer</h2>
                         <img src="./img/question.jpg" alt="Grawer laserowy" class="card__img--full">
@@ -398,7 +414,6 @@
                                 ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...</p>
                         </figcaption>
                     </figure>
-
                     <figure class="card">
                         <h2 class="card__title">Wgrzew</h2>
                         <img src="./img/question.jpg" alt="Grawer laserowy" class="card__img--full">
@@ -410,7 +425,6 @@
                                 ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...</p>
                         </figcaption>
                     </figure>
-
                     <figure class="card">
                         <h2 class="card__title">Sublimacja</h2>
                         <img src="./img/question.jpg" alt="Grawer laserowy" class="card__img--full">
@@ -422,7 +436,6 @@
                                 ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...</p>
                         </figcaption>
                     </figure>
-
                     <figure class="card">
                         <h2 class="card__title">DTF</h2>
                         <img src="./img/question.jpg" alt="Grawer laserowy" class="card__img--full">
@@ -434,22 +447,16 @@
                                 ..., ..., ..., ..., ..., ..., ..., ..., ..., ..., ...</p>
                         </figcaption>
                     </figure>
-
-
                 </div>
             </div>
-
             </div>
-
-
-
-        </section>
+        </section> -->
 
         <!-- CONTACT SECTION -->
 
         <section class="contact-section" id="contact">
+            <div class="contact__bg"></div>
             <div class="container">
-                <div class="contact__bg"></div>
                 <div class="row contact">
                     <div class="contact__left-col">
                         <h2 class="contact__title">formularz</h2>
