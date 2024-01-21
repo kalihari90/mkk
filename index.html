@@ -47,6 +47,7 @@
     <main>
         <!-- HERO SECTION (ABOVE THE FOLD)-->
         <section class="hero-section" id="hero">
+            <div class="hero__bg--gradient"></div>
             <div class="hero__bg"></div>
 
             <div class="container">
@@ -76,21 +77,21 @@
             <div class="container">
                 <div class="offers row">
                     <div class="offer">
-                        <a href="#printing" class="offer__link">
+                        <a href="#printing">
                             <img class="offer__img" src="./img/poligrafia_color.svg" alt="Poligrafia">
-                            <p class="offer__text">Poligrafia</p>
+                            <p class="offer__text offer__text--blue">Poligrafia</p>
                         </a>
                     </div>
                     <div class="offer">
-                        <a href="#gadgets" class="offer__link">
+                        <a href="#gadgets">
                             <img class="offer__img" src="./img/gadgets_color.svg" alt="Gadżety reklamowe">
-                            <p class="offer__text">Gadżety reklamowe</p>
+                            <p class="offer__text offer__text--red">Gadżety reklamowe</p>
                         </a>
                     </div>
                     <div class="offer">
-                        <a href="#clothing" class="offer__link">
+                        <a href="#clothing">
                             <img class="offer__img" src="./img/clothes_color.svg" alt="Odzież reklamowa">
-                            <p class="offer__text">Odzież reklamowa</p>
+                            <p class="offer__text offer__text--blue">Odzież reklamowa</p>
                         </a>
                     </div>
                 </div>
@@ -104,7 +105,7 @@
                 <div class="about-us">
                     <div class="about-us__column">
 
-                        <h2 class="about-us__title">Historia</h2>
+                        <h2 class="about-us__title about-us__title--first">Historia</h2>
                         <p class="about-us__text"><span class="about-us__text--date">1995</span> - Firma prowadzi
                             działalność w
                             branży reklamowej.</p>
@@ -169,6 +170,7 @@
 
         <!-- BIG-NUMBERS (STRIPE SECTION) -->
         <section class="big-numbers-section animate-section" id="big-numbers">
+            <div class="big-numbers__bg--gradient"></div>
             <div class="big-numbers__bg"></div>
             <div class="container">
                 <div class="big-numbers row">
@@ -238,7 +240,8 @@
         <!-- GADGETS SECTION -->
         <section class="gadgets-section" id="gadgets">
             <div class="container">
-                <h2 class="gadgets__title"><span class="title__bg">Gadżety reklamowe</span></h2>
+                <h2 class="gadgets__title"><span class="title__bg">Gadżety <span class="title--desktop">
+                            reklamowe</span></span></h2>
                 <div class="gadgets row">
                     <div class="gadgets__left-col">
                         <img class="gadgets__img" src="./img/gadgets.svg" alt="Gadżety reklamowe">
@@ -274,7 +277,8 @@
 
         <section class="clothing-section" id="clothing">
             <div class="container">
-                <h2 class="clothing__title"><span class="title__bg">Odzież reklamowa</span></h2>
+                <h2 class="clothing__title"><span class="title__bg">Odzież <span class="title--desktop">
+                            reklamowa</span></span></h2>
                 <div class="clothing row">
                     <div class="clothing__left-col">
                         <img class="clothing__img" src="./img/clothes.svg" alt="Odzież reklamowa">
@@ -306,6 +310,19 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="clothing__suppliers">
+                    <a href="http://www.promostars.pl" class="clothing__supply"><img src="./img/logo_promostars.svg"
+                            class="clothing__logo" alt=""></a>
+                    <a href="http://www.stedman.eu" class="clothing__supply"><img src="./img/logo_stedman.svg"
+                            class="clothing__logo" alt=""></a>
+                    <a href="http://www.james-harvest.pl" class="clothing__supply"><img src="./img/logo_harvest.svg"
+                            class="clothing__logo" alt=""></a>
+                    <a href="http://www.mkk.pl" class="clothing__supply"><img src="./img/logo_cottover.svg"
+                            class="clothing__logo" alt=""></a>
+
+                </div>
+
 
             </div>
         </section>
@@ -496,7 +513,7 @@
                         <div class="contact__map">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3386.2789058196245!2d19.04611373260309!3d53.119873672034956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471cda593d2718ab%3A0x93f624c9f7de7ea5!2sDworcowa%204%2C%2087-400%20Golub-Dobrzy%C5%84!5e0!3m2!1spl!2spl!4v1700762950844!5m2!1spl!2spl"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                width="502" height="430" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
@@ -508,34 +525,43 @@
 
     <!-- FOOTER -->
     <footer class="footer-section">
+        <div class="about-us__bg"></div>
         <div class="container">
             <div class="row footer">
                 <div class="footer__column">
                     <div class="footer__title">drukarnia</div>
-                    <a href="" class="footer__logo-link">
+                    <a href="#" class="footer__logo-link">
                         <img src="./img/Logo-MKK-2.svg" alt="" class="footer__logo"></a>
                 </div>
 
                 <div class="footer__column">
                     <div class="footer__title">menu</div>
 
-                    <div class="footer__text"><img src="./img/footer_arrow.svg" alt="" class="footer__icon">historia
-                    </div>
-                    <div class="footer__text"><img src="./img/footer_arrow.svg" alt="" class="footer__icon">referencje
-                    </div>
-                    <div class="footer__text"><img src="./img/footer_arrow.svg" alt="" class="footer__icon">kontakt
-                    </div>
+                    <div class="footer__text"><a href="#about-us"><img src="./img/footer_arrow.svg" alt=""
+                                class="footer__icon">o nas
+                        </a></div>
+                    <div class="footer__text"><a href="#"><img src="./img/footer_arrow.svg" alt=""
+                                class="footer__icon">referencje
+                        </a></div>
+                    <div class="footer__text"><a href="#contact"><img src="./img/footer_arrow.svg" alt=""
+                                class="footer__icon">kontakt
+                        </a></div>
                 </div>
 
                 <div class="footer__column">
                     <div class="footer__title">oferta</div>
 
-                    <div class="footer__text"><img src="./img/footer_arrow.svg" alt="" class="footer__icon">poligrafia
-                    </div>
-                    <div class="footer__text"><img src="./img/footer_arrow.svg" alt="" class="footer__icon">gadżety
-                        reklamowe</div>
-                    <div class="footer__text"><img src="./img/footer_arrow.svg" alt="" class="footer__icon">odzież
-                        reklamowa</div>
+
+                    <div class="footer__text"><a href="#printing"><img src="./img/footer_arrow.svg" alt=""
+                                class="footer__icon">poligrafia
+                        </a></div>
+
+                    <div class="footer__text"><a href="#gadgets"><img src="./img/footer_arrow.svg" alt=""
+                                class="footer__icon">gadżety
+                            reklamowe</a></div>
+                    <div class="footer__text"><a href="#clothing"><img src="./img/footer_arrow.svg" alt=""
+                                class="footer__icon">odzież
+                            reklamowa</a></div>
                 </div>
 
                 <div class="footer__column">
@@ -548,8 +574,8 @@
                     <div class="footer__text"><img src="./img/footer_phone.svg" alt="" class="footer__icon"> tel. 56
                         68
                         22 600</div>
-                    <div class="footer__text footer__text--lowercase"><img src="./img/footer_at.svg" alt=""
-                            class="footer__icon"> mkk@mkk.pl</div>
+                    <div class="footer__text footer__text--lowercase"><a href="mailto:mkk@mkk.pl"><img
+                                src="./img/footer_at.svg" alt="" class="footer__icon"> mkk@mkk.pl</a></div>
 
                 </div>
 
