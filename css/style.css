@@ -559,11 +559,18 @@ button {
 }
 
 .printing__services,
+.printing__services--row,
 .gadgets__services,
-.clothing__services {
+.gadgets__services--row,
+.clothing__services,
+.clothing__services--row {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
+}
+
+.printing__service {
+	display: flex;
 }
 
 .printing__service-icon,
@@ -833,7 +840,9 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 502px;
+	/* width: 502px;
+	height: 430px; */
+	width: 100%;
 	height: 430px;
 }
 
@@ -1174,5 +1183,37 @@ button {
 	.footer {
 		display: flex;
 		gap: 2em;
+	}
+}
+
+@media (min-width: 1024px) {
+	.printing__left-col,
+	.gadgets__left-col,
+	.clothing__left-col {
+		width: 34%;
+	}
+
+	.printing__right-col,
+	.gadgets__right-col,
+	.clothing__right-col {
+		width: 66%;
+	}
+
+	.printing__services,
+	.gadgets__services,
+	.clothing__services {
+		display: flex;
+		flex-direction: row;
+		column-gap: 2em;
+		flex: 1;
+	}
+
+	.printing__services--row,
+	.gadgets__services--row,
+	.clothing__services--row {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		flex: 1;
 	}
 }
