@@ -57,7 +57,8 @@ img {
 }
 
 ul {
-	list-style: none;
+	list-style: square;
+	list-style-position: inside;
 }
 
 a {
@@ -107,12 +108,16 @@ a {
 .clothing__title,
 .contact__title,
 .services__title {
-	font-size: 3rem;
+	font-size: 1.75rem;
 	font-weight: 900;
 	padding-bottom: 0.75em;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
 	transition: transform 0.3s ease-in-out;
+}
+
+.hero__title {
+	font-size: 2.5rem;
 }
 
 .printing__title,
@@ -230,7 +235,7 @@ header {
 .nav__link--button {
 	padding: 0.5em 1em;
 	color: var(--red-light);
-	border-radius: 100px;
+	border-radius: 10px;
 	background-color: var(--white-light);
 	/* box-shadow: var(--red-dark) 0px 8px 24px;
 	box-shadow: 2px 0 -2px 0 rgba(0, 0, 0, 0.25); */
@@ -336,13 +341,13 @@ button {
 }
 
 .about-us__text {
-	font-size: 1.25rem;
+	font-size: 1rem;
 	line-height: 1.5;
 }
 
 /* .hero__text--date */
 .about-us__text--date {
-	font-size: 1.75rem;
+	font-size: 1.25rem;
 	font-weight: bold;
 }
 
@@ -354,7 +359,7 @@ button {
 	padding: 0.5em 1em;
 	color: var(--white-light);
 	text-shadow: var(--white-dark) 1px 1px 2px;
-	border-radius: 100px;
+	border-radius: 10px;
 	background-color: var(--red-light);
 	cursor: pointer;
 	transition: 0.3s ease-in-out;
@@ -389,7 +394,8 @@ button {
 .contact__bg,
 .offer__bg,
 .big-numbers__bg,
-.big-numbers__bg--gradient {
+.big-numbers__bg--gradient,
+.footer__bg {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -420,6 +426,14 @@ button {
 	opacity: 0.75; /* Ustaw poziom prześwitu */
 	z-index: 0;
 }
+
+.footer__bg {
+	background-color: rgba(0, 25, 56, 1);
+	background-image: radial-gradient(circle, rgba(43, 75, 113, 1) 30%, rgba(0, 25, 56, 1) 100%);
+	opacity: 0.5; /* Ustaw poziom prześwitu */
+	z-index: 0;
+}
+
 .contact__bg {
 	background: url("../img/contact_bg.jpeg") center/cover no-repeat; /* Zastosuj obrazek w tle */
 	opacity: 0.4;
@@ -495,7 +509,7 @@ button {
 }
 
 .offer__text--red {
-	color: var(--red-dark);
+	color: var(--red-light);
 }
 
 .offer__img {
@@ -503,7 +517,6 @@ button {
 	height: 300px;
 	padding: 0.5rem 1.5rem;
 	margin: 1rem 0;
-	opacity: 0.75;
 }
 
 /* -------------------- */
@@ -515,6 +528,23 @@ button {
 	color: var(--white-light);
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
 	position: relative;
+}
+
+.about-us__title {
+	text-align: center;
+}
+
+.about-us__img-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.about-us__img {
+	height: 150px;
+	width: 150px;
+	padding: 0.5rem 1.5rem;
+	margin: 1rem 0;
 }
 
 /* ---------------------------- */
@@ -539,11 +569,12 @@ button {
 	font-weight: bold;
 	padding: 0.5rem 1.5rem;
 	margin: 1rem 0;
-	border: 2px solid var(--blue-dark);
 	color: var(--blue-dark);
+	/* border: 2px solid var(--blue-dark);
 	background-color: var(--yellow);
 	border-radius: 2rem;
-	box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.16) 0px 2px 4px;
+	box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.16) 0px 2px 4px; */
+	text-shadow: var(--blue-darker) 1px 1px 1px;
 }
 
 /* ---------------------------- */
@@ -567,10 +598,6 @@ button {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
-}
-
-.printing__service {
-	display: flex;
 }
 
 .printing__service-icon,
@@ -659,8 +686,15 @@ button {
 }
 
 .clothing__logo {
-	width: 100%;
-	height: 100%;
+	width: 80%;
+	height: 80%;
+	opacity: 0.8;
+	transition: 0.3s ease-in-out;
+}
+
+.clothing__logo:hover {
+	transform: scale(1.2);
+	opacity: 1;
 }
 
 /* ----------------------------- */
@@ -848,6 +882,7 @@ button {
 
 .contact__icon {
 	padding-right: 1em;
+	height: 1.5rem;
 }
 
 /* --------------------------- */
@@ -855,7 +890,7 @@ button {
 /* --------------------------- */
 
 .footer-section {
-	background-color: var(--blue-dark);
+	background-color: var(--black-dark);
 	color: var(--white-light);
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
 	position: relative;
@@ -889,7 +924,7 @@ button {
 }
 
 .footer__title {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: 900;
 	padding: 0.5em 0 0.25em;
 	text-transform: uppercase;
@@ -898,7 +933,7 @@ button {
 
 .footer__text {
 	display: inline-block;
-	font-size: 1rem;
+	font-size: 0.75rem;
 	padding: 0.25em 0;
 	line-height: 1em;
 	text-transform: uppercase;
@@ -963,11 +998,11 @@ button {
 	}
 
 	.nav__link {
-		color: var(--blue-dark);
+		color: var(--white-light);
 	}
 
 	.nav__link--button {
-		background-color: var(--yellow);
+		background-color: var(--red-light);
 	}
 
 	.nav__item {
@@ -1000,7 +1035,7 @@ button {
 	.clothing__title,
 	.contact__title,
 	.services__title {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 
 	.hero__text:nth-of-type(2) {
@@ -1064,11 +1099,6 @@ button {
 
 	.about-us__column {
 		flex: 1;
-	}
-
-	.about-us__title {
-		text-align: center;
-		font-size: 2rem;
 	}
 
 	.big-number__text:hover,
