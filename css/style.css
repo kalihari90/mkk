@@ -590,14 +590,12 @@ button {
 }
 
 .printing__services,
-.printing__services--row,
 .gadgets__services,
-.gadgets__services--row,
-.clothing__services,
-.clothing__services--row {
+.clothing__services {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
+	margin-bottom: 1em;
 }
 
 .printing__service-icon,
@@ -611,7 +609,7 @@ button {
 .printing__service,
 .gadgets__service,
 .clothing__service {
-	font-size: 1.5rem;
+	font-size: 1rem;
 }
 
 .printing__img,
@@ -629,20 +627,6 @@ button {
 	margin-bottom: 1em;
 }
 
-.printing__left-col,
-.gadgets__left-col,
-.clothing__left-col,
-.contact__left-col {
-	display: flex;
-	flex-direction: column;
-}
-
-.printing__left-col,
-.gadgets__left-col,
-.clothing__left-col {
-	justify-content: center;
-}
-
 /* ---------------------------- */
 /*        gadgets section       */
 /* ---------------------------- */
@@ -654,6 +638,16 @@ button {
 
 	color: var(--white-light);
 	box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.gadgets,
+.printing,
+.clothing,
+.gadgets__col,
+.printing__col,
+.clothing__col {
+	display: flex;
+	flex-direction: column;
 }
 
 .gadgets__left-col {
@@ -683,6 +677,9 @@ button {
 
 .clothing__supply {
 	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .clothing__logo {
@@ -857,11 +854,6 @@ button {
 	padding: 0.5em;
 }
 
-.contact__right-col,
-.contact__left-col {
-	height: auto;
-}
-
 .contact__form-btn {
 	font-size: 1.5rem;
 	margin-bottom: 2em;
@@ -901,14 +893,6 @@ button {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-}
-
-.footer__column:first-of-type {
-	margin-right: 1em;
-}
-
-.footer__column:nth-of-type(2) {
-	margin-right: -3em;
 }
 
 .footer__logo {
@@ -1068,19 +1052,43 @@ button {
 		width: 250px;
 		column-gap: 3rem;
 	}
+
+	.gadgets__col {
+		flex-direction: column-reverse;
+		order: 2;
+	}
+
+	.gadgets__col--swap {
+		order: 1;
+	}
 }
 /* ============= */
 /* == desktop == */
 /* ============= */
 
 @media (min-width: 750px) {
-	.hero,
+	.hero {
+		display: flex;
+		gap: 3em;
+	}
+
 	.printing,
 	.gadgets,
 	.clothing,
 	.contact {
-		display: flex;
-		gap: 3em;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 3em;
+	}
+
+	.contact {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.gadgets__services,
+	.printing__services,
+	.clothing__services {
+		margin-bottom: 0;
 	}
 
 	.hero__text,
@@ -1171,26 +1179,7 @@ button {
 		padding: 2em 0;
 	}
 
-	.gadgets__left-col {
-		order: 1;
-	}
-
-	.gadgets__right-col {
-		order: 0;
-	}
-
-	.printing__left-col,
-	.printing__right-col,
-	.gadgets__left-col,
-	.gadgets__right-col,
-	.clothing__left-col,
-	.clothing__right-col,
-	.contact__left-col,
-	.contact__right-col {
-		width: 50%;
-	}
-
-	.printing__title,
+	.gadgets__ .printing__title,
 	.gadgets__title,
 	.clothing__title {
 		margin-bottom: 0;
@@ -1212,38 +1201,13 @@ button {
 @media (min-width: 980px) {
 	.footer {
 		display: flex;
-		gap: 2em;
+		gap: 3em;
 	}
 }
-
 @media (min-width: 1024px) {
-	.printing__left-col,
-	.gadgets__left-col,
-	.clothing__left-col {
-		width: 34%;
-	}
-
-	.printing__right-col,
-	.gadgets__right-col,
-	.clothing__right-col {
-		width: 66%;
-	}
-
-	.printing__services,
-	.gadgets__services,
-	.clothing__services {
-		display: flex;
-		flex-direction: row;
-		column-gap: 2em;
-		flex: 1;
-	}
-
-	.printing__services--row,
-	.gadgets__services--row,
-	.clothing__services--row {
-		display: flex;
-		flex-direction: column;
-		gap: 1em;
-		flex: 1;
+	.printing__service,
+	.gadgets__service,
+	.clothing__service {
+		font-size: 1.2rem;
 	}
 }
