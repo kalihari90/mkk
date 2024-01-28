@@ -109,7 +109,7 @@ a {
 .contact__title,
 .services__title {
 	font-size: 1.75rem;
-	font-weight: 900;
+	font-weight: 700;
 	padding-bottom: 0.75em;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
@@ -142,13 +142,13 @@ a {
 
 /* animations */
 
-.nav__link:hover,
-.nav__link:focus,
 .nav__link--button:hover,
 .nav__link--button:focus,
+.nav__link:hover,
+.nav__link:focus,
 .hero__btn:hover,
 .hero__btn:focus {
-	opacity: 0.75;
+	opacity: 0.85;
 }
 
 /* -------------------- */
@@ -198,7 +198,7 @@ header {
 	display: flex;
 	align-items: center;
 	font-weight: 500;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 }
 
 .nav__link {
@@ -353,7 +353,7 @@ button {
 
 .hero__btn,
 .contact__form-btn {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	letter-spacing: 0.1rem;
 	margin: 1em 0;
 	padding: 0.5em 1em;
@@ -436,22 +436,22 @@ button {
 
 .contact__bg {
 	background: url("../img/contact_bg.jpeg") center/cover no-repeat; /* Zastosuj obrazek w tle */
-	opacity: 0.4;
+	opacity: 0.5;
 	z-index: 0;
 }
 
 .offer__bg {
 	/* background: url("../img/opt-lasers.jpg") center/cover no-repeat; Zastosuj obrazek w tle */
-	background-color: var(--white-dark);
-	background-image: radial-gradient(circle, var(--white-light) 70%, var(--white-dark) 100%);
-	opacity: 1;
+	background-color: var(--white-light);
+	background-image: radial-gradient(circle, var(--white-light) 50%, var(--blue-dark) 100%);
+	opacity: 0.2;
 	/* background-attachment: fixed; */
 }
 
 .big-numbers__bg {
 	background: url("../img/numbers_bg.png") center/cover no-repeat; /* Zastosuj obrazek w tle */
 	z-index: 2;
-	opacity: 0.4;
+	opacity: 0.5;
 	background-attachment: fixed;
 	background-position-x: -300px;
 	background-position-y: 50px;
@@ -617,7 +617,6 @@ button {
 .clothing__img {
 	height: 15rem;
 	object-fit: contain;
-	opacity: 0.75;
 }
 
 .printing__title,
@@ -837,25 +836,24 @@ button {
 
 .contact__form-title,
 .contact__adress {
-	font-size: 1.5rem;
-	line-height: 1.5rem;
+	font-size: 1.25rem;
+	line-height: 1.25rem;
 	padding: 0.5em 0;
 }
 
 .contact__adress--title {
-	font-size: 1.75rem;
-	line-height: 1.75rem;
+	font-size: 1.5rem;
+	line-height: 1.5rem;
 	font-weight: 700;
 }
 
 .contact__form-input {
 	font-size: 1.25rem;
-	line-height: 1.25rem;
+	line-height: 1.5rem;
 	padding: 0.5em;
 }
 
 .contact__form-btn {
-	font-size: 1.5rem;
 	margin-bottom: 2em;
 }
 
@@ -874,7 +872,12 @@ button {
 
 .contact__icon {
 	padding-right: 1em;
-	height: 1.5rem;
+	height: 20px;
+	width: 50px;
+}
+
+.contact__icon--wide {
+	height: 12px;
 }
 
 /* --------------------------- */
@@ -919,7 +922,7 @@ button {
 	display: inline-block;
 	font-size: 0.75rem;
 	padding: 0.25em 0;
-	line-height: 1em;
+	line-height: 1;
 	text-transform: uppercase;
 	font-weight: normal;
 	letter-spacing: normal;
@@ -987,10 +990,15 @@ button {
 
 	.nav__link--button {
 		background-color: var(--red-light);
+		opacity: 0.75;
+	}
+
+	.nav__link--button:hover {
+		opacity: 1;
 	}
 
 	.nav__item {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		padding: 0.5em 0;
 		margin: 0 auto;
 	}
@@ -1204,6 +1212,7 @@ button {
 		gap: 3em;
 	}
 }
+
 @media (min-width: 1024px) {
 	.printing__service,
 	.gadgets__service,

@@ -75,13 +75,12 @@ document.addEventListener("DOMContentLoaded", function () {
 						}
 					};
 
-					updateCount();
 					counter.setAttribute("data-animated", "true");
+					updateCount();
 				}
 			}
 		});
 	};
-
 	// Uruchom funkcję handleScroll po przewinięciu strony
 	window.addEventListener("scroll", handleScroll);
 
