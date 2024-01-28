@@ -147,7 +147,9 @@ a {
 .nav__link:hover,
 .nav__link:focus,
 .hero__btn:hover,
-.hero__btn:focus {
+.hero__btn:focus,
+.contact__form-btn:hover,
+.contact__form-btn:focus {
 	opacity: 0.85;
 }
 
@@ -204,6 +206,8 @@ header {
 .nav__link {
 	position: relative;
 	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.05rem;
 	color: var(--white-light);
 	transition: 0.3s ease-in-out;
 }
@@ -235,7 +239,7 @@ header {
 .nav__link--button {
 	padding: 0.5em 1em;
 	color: var(--red-light);
-	border-radius: 10px;
+	border-radius: 5px;
 	background-color: var(--white-light);
 	/* box-shadow: var(--red-dark) 0px 8px 24px;
 	box-shadow: 2px 0 -2px 0 rgba(0, 0, 0, 0.25); */
@@ -333,9 +337,10 @@ button {
 	flex: 1;
 	padding-inline: 1em;
 	justify-content: baseline;
+	font-weight: 600;
 }
 
-.hero__text:nth-of-type(2) {
+.hero__text--border {
 	border-left: 2px var(--white-light) solid;
 	border-right: 2px var(--white-light) solid;
 }
@@ -359,7 +364,7 @@ button {
 	padding: 0.5em 1em;
 	color: var(--white-light);
 	text-shadow: var(--white-dark) 1px 1px 2px;
-	border-radius: 10px;
+	border-radius: 5px;
 	background-color: var(--red-light);
 	cursor: pointer;
 	transition: 0.3s ease-in-out;
@@ -407,7 +412,7 @@ button {
 
 .hero__bg--gradient {
 	background: var(--blue-dark);
-	background: linear-gradient(90deg, var(--blue-darker) 10%, var(--blue-dark) 100%);
+	background: linear-gradient(90deg, var(--blue-darker) 35%, var(--blue-dark) 100%);
 	z-index: 1; /* Przesuń obrazek w tło */
 	opacity: 1;
 }
@@ -416,7 +421,7 @@ button {
 	background: url("../img/hero_bg.png") center/cover no-repeat;
 	background-size: cover;
 	z-index: 2;
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 .about-us__bg {
@@ -566,7 +571,7 @@ button {
 .big-number {
 	display: inline-block;
 	font-size: 6rem;
-	font-weight: bold;
+	font-weight: 600;
 	padding: 0.5rem 1.5rem;
 	margin: 1rem 0;
 	color: var(--blue-dark);
@@ -730,7 +735,7 @@ button {
 	/* width: clamp(350px, 80vw, 450px); */
 	width: clamp(100px, 80vw, 250px);
 	height: 300px;
-	border-radius: 10px;
+	border-radius: 5px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 	overflow: hidden;
@@ -837,13 +842,14 @@ button {
 .contact__form-title,
 .contact__adress {
 	font-size: 1.25rem;
-	line-height: 1.25rem;
+	font-weight: 600;
+	line-height: 1.25;
 	padding: 0.5em 0;
 }
 
 .contact__adress--title {
 	font-size: 1.5rem;
-	line-height: 1.5rem;
+	line-height: 1.5;
 	font-weight: 700;
 }
 
@@ -871,13 +877,21 @@ button {
 }
 
 .contact__icon {
+	font-weight: 700;
 	padding-right: 1em;
-	height: 20px;
+	height: 25px;
 	width: 50px;
 }
 
+.contact__icon--pin {
+	width: 40px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
 .contact__icon--wide {
-	height: 12px;
+	width: 45px;
+	margin-right: 5px;
 }
 
 /* --------------------------- */
@@ -963,7 +977,7 @@ button {
 		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
-		border-radius: 0 0 10px 10px;
+		border-radius: 0 0 5px 5px;
 	}
 
 	.active {
