@@ -44,6 +44,7 @@ body {
 	font-family: "Quicksand", sans-serif;
 	font-weight: 500;
 	font-size: 16px;
+	overflow-x: hidden;
 }
 
 img {
@@ -114,6 +115,11 @@ a {
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
 	transition: transform 0.3s ease-in-out;
+}
+
+.hero__title,
+.hero__text {
+	text-shadow: 1px 1px 1px#11111181;
 }
 
 .hero__title {
@@ -210,6 +216,7 @@ header {
 	letter-spacing: 0.05rem;
 	color: var(--white-light);
 	transition: 0.3s ease-in-out;
+	text-shadow: 1px 1px 1px#11111181;
 }
 
 .nav__link,
@@ -244,6 +251,7 @@ header {
 	/* box-shadow: var(--red-dark) 0px 8px 24px;
 	box-shadow: 2px 0 -2px 0 rgba(0, 0, 0, 0.25); */
 	box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.16) 0px 2px 4px;
+	text-shadow: none;
 }
 
 .logo__img {
@@ -326,8 +334,7 @@ button {
 	padding-top: 0;
 } */
 
-.hero__text,
-.about-us__text {
+.hero__text {
 	font-size: 1.5rem;
 	padding: 0.5em 0em;
 	line-height: 1.25em;
@@ -348,6 +355,8 @@ button {
 .about-us__text {
 	font-size: 1rem;
 	line-height: 1.5;
+	padding: 0.5em 0em;
+	text-wrap: balance;
 }
 
 /* .hero__text--date */
@@ -507,6 +516,7 @@ button {
 	text-transform: uppercase;
 	padding: 0 0 1em;
 	transition: 0.3s ease-in-out;
+	text-shadow: 1px 1px 1px#11111120;
 }
 
 .offer__text--blue {
@@ -971,9 +981,11 @@ button {
 		opacity: 0.6;
 		padding: 1.5em 0;
 		box-shadow: -10px 0 10px 0 rgba(0, 0, 0, 0.25);
-		background-color: var(--white-light);
 
-		background: rgba(172, 205, 251, 0.5);
+		background-color: var(--white-light);
+		/* background: rgba(172, 205, 251, 0.5); */
+
+		background: rgba(var(--blue-dark), 0.5);
 		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
@@ -1000,11 +1012,12 @@ button {
 
 	.nav__link {
 		color: var(--white-light);
+		text-shadow: 1px 1px 6px var(--black-dark);
 	}
 
 	.nav__link--button {
 		background-color: var(--red-light);
-		opacity: 0.75;
+		opacity: 0.85;
 	}
 
 	.nav__link--button:hover {
@@ -1032,6 +1045,8 @@ button {
 	.offers,
 	.big-numbers {
 		flex-direction: column;
+		gap: 0;
+		padding-block: 2em;
 	}
 
 	.hero__title,
@@ -1044,8 +1059,29 @@ button {
 		font-size: 1.5rem;
 	}
 
-	.hero__text:nth-of-type(2) {
+	.hero__title {
+		font-size: 2.5rem;
+	}
+
+	.hero__text-box {
+		margin-block: 1em;
+	}
+
+	.hero__text {
+		font-size: 1.25rem;
+		line-height: 1.5;
+	}
+
+	.hero__text--border {
 		border: none;
+	}
+
+	.hero__btn {
+		margin-top: 2em;
+	}
+
+	.hero__info {
+		margin-bottom: 0;
 	}
 
 	.about-us__title {
@@ -1057,7 +1093,11 @@ button {
 	}
 
 	.about-us__text {
-		padding: 0 0.5em;
+		padding: 0.5em 0.5em;
+	}
+
+	.about-us__text:last-of-type {
+		padding-bottom: 3em;
 	}
 
 	.big-numbers__bg {
@@ -1082,6 +1122,28 @@ button {
 
 	.gadgets__col--swap {
 		order: 1;
+	}
+
+	.printing__img,
+	.clothing__img,
+	.gadgets__img {
+		margin-bottom: 3em;
+	}
+
+	.printing__title,
+	.clothing__title,
+	.gadgets__title {
+		margin-bottom: 0;
+	}
+
+	.printing__service,
+	.clothing__service,
+	.gadgets__service {
+		font-size: 1.2rem;
+	}
+
+	.contact__form-btn {
+		margin-bottom: 3em;
 	}
 }
 /* ============= */
@@ -1185,8 +1247,7 @@ button {
 
 	.hero__text-box {
 		display: flex;
-		justify-content: space-between;
-		/* gap: 1em; */
+		justify-content: space-around;
 	}
 
 	.hero__icon {
@@ -1232,5 +1293,17 @@ button {
 	.gadgets__service,
 	.clothing__service {
 		font-size: 1.2rem;
+	}
+}
+
+@media (min-width: 1050px) {
+	.hero__text--border {
+		padding-inline: 1.5em;
+	}
+}
+
+@media (min-width: 1080px) {
+	.hero__text--border {
+		padding-inline: 2em;
 	}
 }
