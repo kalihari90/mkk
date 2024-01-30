@@ -47,6 +47,10 @@ body {
 	overflow-x: hidden !important;
 }
 
+header {
+	overflow-x: hidden !important;
+}
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -182,6 +186,7 @@ header {
 	display: flex;
 	justify-content: flex-end;
 	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 
@@ -852,6 +857,10 @@ button {
 
 /* mobile navigation */
 @media screen and (max-width: 750px) {
+	header {
+		max-width: 100%;
+	}
+
 	header .container {
 		justify-content: space-between;
 	}
@@ -948,8 +957,16 @@ button {
 		font-size: 2rem;
 	}
 
+	.hero__icon {
+		padding-right: 0;
+	}
+
 	.hero__text-box {
 		margin-block: 1em;
+	}
+
+	.hero__text-box > * {
+		display: flex;
 	}
 
 	.hero__text {
