@@ -4,17 +4,13 @@
 
 :root {
 	/* RED */
-	/* --red-light: #a03a45; */
 	--red-light: #c2200e;
-	/* --red-dark: #b57577; */
 	--red-dark: #8a0e00;
 	/* BLUE */
 	--blue-dark: #2b4b71;
-	/* --blue-light: #39b3ce; */
 	--blue-darker: #001938;
 
 	/* WHITE */
-	/* --white-dark: #ccc4c7; */
 	--white-dark: #e1e2e6;
 	--white-light: #f5f5f5;
 
@@ -23,7 +19,6 @@
 	/* unused */
 	--black-dark: #111111;
 	--black-light: #333333;
-	/* --blue-light: #8299b2; */
 }
 
 *,
@@ -32,7 +27,6 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	overflow-x: hidden !important;
 }
 
 html {
@@ -525,8 +519,8 @@ button {
 }
 
 .offer__img {
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	padding: 0.5rem 1.5rem;
 	margin: 1rem 0;
 }
@@ -1044,6 +1038,11 @@ button {
 
 	.contact__form-btn {
 		margin-bottom: 3em;
+	}
+
+	.contact__bg {
+		background-position-x: -300px;
+		opacity: 0.2;
 	}
 }
 
