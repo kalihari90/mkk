@@ -332,9 +332,7 @@ button {
 }
 
 .hero__text {
-	flex: 1;
 	padding-inline: 1em;
-	justify-content: baseline;
 	font-weight: 600;
 }
 
@@ -348,6 +346,7 @@ button {
 	line-height: 1.5;
 	padding: 0.5em 0em;
 	text-wrap: balance;
+	line-break: auto;
 }
 
 /* .hero__text--date */
@@ -1094,7 +1093,7 @@ button {
 	.big-number__text:hover,
 	.offer__text:hover,
 	.about-us__title:hover {
-		transform: scale(1.2);
+		transform: scale(1.1);
 	}
 
 	.footer {
@@ -1144,8 +1143,11 @@ button {
 	}
 
 	.hero__text-box {
-		display: flex;
-		justify-content: space-around;
+		/* display: flex;
+		justify-content: space-around; */
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 
 	.hero__icon {
@@ -1191,17 +1193,5 @@ button {
 	.gadgets__service,
 	.clothing__service {
 		font-size: 1.2rem;
-	}
-}
-
-@media (min-width: 1050px) {
-	.hero__text--border {
-		padding-inline: 1.5em;
-	}
-}
-
-@media (min-width: 1080px) {
-	.hero__text--border {
-		padding-inline: 2em;
 	}
 }
